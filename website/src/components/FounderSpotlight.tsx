@@ -6,7 +6,11 @@ export default function FounderSpotlight() {
   return (
     <section className="section-padding">
       <div className="mx-auto max-w-7xl">
-        <SectionHeading label="Our Legacy" title="Led by Experience" />
+        <SectionHeading
+          label="Our Story"
+          title="A School Built on Love"
+          subtitle="Not a franchise. Not an institution. A mother's vision for Kullu's children."
+        />
 
         <FadeIn>
           <div className="trust-strip mx-auto max-w-3xl flex flex-col items-center gap-6 sm:flex-row sm:items-start">

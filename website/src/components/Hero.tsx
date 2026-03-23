@@ -26,11 +26,15 @@ export default function Hero() {
           <span className="text-primary">Brightest Future Begins</span>
         </h1>
 
-        {/* Benefit-focused subtitle */}
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-text-light leading-relaxed">
+        {/* Positioning + benefit subtitle */}
+        <p className="mx-auto mt-4 max-w-xl text-sm font-semibold text-accent uppercase tracking-wider">
+          Kullu Valley&apos;s dedicated early childhood learning center
+        </p>
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-text-light leading-relaxed">
           Imagine your child coming home excited to tell you what they learned today.
-          At Kids Planet, we nurture confident, curious learners from age 2 to 14 —
-          in small classrooms where every child is seen, heard, and celebrated.
+          At Kids Planet, we don&apos;t treat preschool as an afterthought — it&apos;s our
+          entire mission. Small classrooms, personal attention, and a curriculum
+          designed for how young children actually learn.
         </p>
 
         {/* CTAs with better wording */}

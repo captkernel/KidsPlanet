@@ -1,14 +1,16 @@
 import { Check, X } from "lucide-react";
 
 const comparisons = [
+  { feature: "Preschool is the core focus, not a feeder program", us: true, them: false },
   { feature: "Class size under 25 students", us: true, them: false },
-  { feature: "Principal knows every child by name", us: true, them: false },
+  { feature: "Principal personally knows every child", us: true, them: false },
+  { feature: "Founder-led, family-run school", us: true, them: false },
+  { feature: "Play-based early learning (NEP 2020 aligned)", us: true, them: false },
   { feature: "Daily activity updates to parents", us: true, them: false },
-  { feature: "Play-based pre-school curriculum (NEP 2020)", us: true, them: false },
   { feature: "Dedicated art, music & sports periods", us: true, them: true },
-  { feature: "15+ years in Kullu Valley", us: true, them: false },
-  { feature: "4.4★ parent rating on JustDial", us: true, them: false },
-  { feature: "Safe campus with CCTV surveillance", us: true, them: true },
+  { feature: "15+ years of early childhood expertise", us: true, them: false },
+  { feature: "4.4★ parent rating (JustDial verified)", us: true, them: true },
+  { feature: "Online inquiry + WhatsApp enrollment", us: true, them: false },
 ];
 
 export function WhyDifferent() {
