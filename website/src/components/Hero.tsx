@@ -1,39 +1,52 @@
 import Link from "next/link";
 import { SCHOOL } from "@/lib/constants";
 import StatsBar from "@/components/StatsBar";
+import { Star } from "lucide-react";
 
 export default function Hero() {
   return (
     <section className="bg-surface-cream">
       <div className="mx-auto max-w-7xl px-4 pt-16 pb-0 text-center sm:px-6 md:pt-24 lg:px-8">
-        {/* Board & classes label */}
-        <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-4">
-          {SCHOOL.board} &middot; {SCHOOL.classes}
-        </span>
+        {/* Social proof badge */}
+        <div className="inline-flex items-center gap-2 bg-white/80 border border-primary/10 px-4 py-1.5 rounded-full mb-6">
+          <div className="flex gap-0.5">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <Star key={i} size={12} className={i < 4 ? "fill-accent text-accent" : "fill-accent/40 text-accent/40"} />
+            ))}
+          </div>
+          <span className="text-xs font-semibold text-primary-dark">
+            Trusted by 200+ families in Kullu Valley
+          </span>
+        </div>
 
-        {/* Main heading */}
-        <h1 className="text-4xl font-bold text-primary-dark sm:text-5xl md:text-6xl">
-          Nurturing Excellence
+        {/* Emotional headline */}
+        <h1 className="text-4xl font-bold text-primary-dark sm:text-5xl md:text-6xl leading-tight">
+          Where Your Child&apos;s
           <br />
-          <span className="text-primary">Since {SCHOOL.founded}</span>
+          <span className="text-primary">Brightest Future Begins</span>
         </h1>
 
-        {/* Subtitle */}
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-text-muted">
-          Founded by {SCHOOL.founder}, {SCHOOL.name} provides quality education
-          from {SCHOOL.classes} in the heart of Kullu Valley &mdash; building
-          character, confidence, and curiosity in every child.
+        {/* Benefit-focused subtitle */}
+        <p className="mx-auto mt-6 max-w-2xl text-lg text-text-light leading-relaxed">
+          Imagine your child coming home excited to tell you what they learned today.
+          At Kids Planet, we nurture confident, curious learners from age 2 to 14 —
+          in small classrooms where every child is seen, heard, and celebrated.
         </p>
 
-        {/* CTAs */}
+        {/* CTAs with better wording */}
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link href="/admissions" className="btn-primary">
-            Begin Admission Process
+          <Link href="/admissions" className="btn-primary text-base px-8 py-3.5">
+            Reserve Your Child&apos;s Seat
           </Link>
-          <Link href="/programs" className="btn-secondary">
-            View Programs
+          <Link href="/daily-life" className="btn-secondary text-base px-8 py-3.5">
+            See a Day at Kids Planet
           </Link>
         </div>
+
+        {/* Urgency line */}
+        <p className="mt-4 text-xs text-red-600 font-semibold">
+          2026–27 admissions open — limited seats available
+        </p>
       </div>
 
       {/* Stats bar */}

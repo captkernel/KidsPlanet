@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { Facebook, Instagram, MapPin, Phone, Mail, Star, Newspaper } from "lucide-react";
 import { SCHOOL, FOOTER_LINKS } from "@/lib/constants";
+import FooterInquiry from "./FooterInquiry";
 
 export default function Footer() {
   return (
     <footer className="bg-primary-dark text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8">
           {/* School Info */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -93,6 +94,14 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+          </div>
+
+          {/* Quick Inquiry */}
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-accent mb-4">
+              Quick Inquiry
+            </h3>
+            <FooterInquiry />
           </div>
         </div>
       </div>
