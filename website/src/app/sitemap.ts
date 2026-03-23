@@ -4,7 +4,7 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://kidsplanetkullu.com";
-  const pages = ["", "/about", "/programs", "/admissions", "/gallery", "/announcements", "/contact"];
+  const pages = ["", "/about", "/programs", "/daily-life", "/faculty", "/achievements", "/admissions", "/gallery", "/announcements", "/faq", "/contact"];
   return pages.map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),

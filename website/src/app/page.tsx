@@ -5,9 +5,15 @@ import SectionHeading from "@/components/SectionHeading";
 import FounderSpotlight from "@/components/FounderSpotlight";
 import ProgramCard from "@/components/ProgramCard";
 import TestimonialCard from "@/components/TestimonialCard";
+import NewsBanner from "@/components/NewsBanner";
+import VideoEmbed from "@/components/VideoEmbed";
+import ReviewBadge from "@/components/ReviewBadge";
+import { SCHOOL } from "@/lib/constants";
+import { BookOpen, Users, Calendar, HelpCircle } from "lucide-react";
 
 import programs from "@/content/programs.json";
 import testimonials from "@/content/testimonials.json";
+import news from "@/content/news.json";
 
 type Program = {
   id: string;
@@ -20,11 +26,50 @@ type Program = {
 
 const typedPrograms = programs as Program[];
 
+const quickLinks = [
+  { href: "/programs", icon: BookOpen, label: "Programs", desc: "Playgroup to Class 8" },
+  { href: "/faculty", icon: Users, label: "Our Faculty", desc: "Meet the teachers" },
+  { href: "/daily-life", icon: Calendar, label: "School Life", desc: "Daily schedule" },
+  { href: "/faq", icon: HelpCircle, label: "FAQ", desc: "Common questions" },
+];
+
 export default function Home() {
   return (
     <>
+      {/* News Banner */}
+      <NewsBanner news={news} />
+
       {/* Hero */}
       <Hero />
+
+      {/* Quick Links for New Parents */}
+      <section className="section-padding bg-surface-cream">
+        <div className="mx-auto max-w-7xl">
+          <FadeIn>
+            <SectionHeading
+              label="New Parent?"
+              title="Start Here"
+              subtitle="Everything you need to know about Kids Planet"
+            />
+          </FadeIn>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {quickLinks.map((item, i) => (
+              <FadeIn key={item.href} delay={i * 0.1}>
+                <Link
+                  href={item.href}
+                  className="card text-center hover:shadow-md transition-shadow group"
+                >
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/20 transition-colors">
+                    <item.icon size={22} className="text-primary" />
+                  </div>
+                  <h3 className="font-bold text-primary-dark text-sm">{item.label}</h3>
+                  <p className="text-xs text-text-muted mt-1">{item.desc}</p>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Programs Section */}
       <section className="section-padding bg-surface">
@@ -51,6 +96,22 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="section-padding bg-surface-cream">
+        <div className="mx-auto max-w-4xl">
+          <FadeIn>
+            <SectionHeading
+              label="Virtual Tour"
+              title="See Our School"
+              subtitle="Take a look inside Kids Planet"
+            />
+          </FadeIn>
+          <FadeIn>
+            <VideoEmbed />
+          </FadeIn>
+        </div>
+      </section>
+
       {/* Founder Spotlight */}
       <FounderSpotlight />
 
@@ -68,6 +129,12 @@ export default function Home() {
               </FadeIn>
             ))}
           </div>
+
+          <FadeIn>
+            <div className="mt-8 text-center">
+              <ReviewBadge />
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -80,7 +147,7 @@ export default function Home() {
             </h2>
             <p className="mt-4 text-white/80">
               Give your child the gift of quality education in the heart of Kullu
-              Valley. Admissions are open for the upcoming academic session.
+              Valley. Admissions are open for the 2026–27 session.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link

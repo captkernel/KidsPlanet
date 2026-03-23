@@ -40,8 +40,21 @@ export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/programs", label: "Programs" },
+  { href: "/daily-life", label: "School Life" },
   { href: "/admissions", label: "Admissions" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/contact", label: "Contact" },
+] as const;
+
+export const FOOTER_LINKS = [
+  { href: "/about", label: "About Us" },
+  { href: "/programs", label: "Programs" },
+  { href: "/faculty", label: "Our Faculty" },
+  { href: "/daily-life", label: "School Life" },
+  { href: "/admissions", label: "Admissions" },
+  { href: "/achievements", label: "Achievements" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/announcements", label: "Announcements" },
+  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ] as const;

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { SCHOOL, NAV_LINKS } from "@/lib/constants";
 
 export default function Header() {
@@ -43,7 +43,16 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* Mobile menu button */}
+          {/* Mobile phone + menu */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <a
+              href={`tel:${SCHOOL.phone}`}
+              className="p-2 text-primary hover:bg-primary/5 rounded-md transition-colors"
+              aria-label="Call us"
+            >
+              <Phone className="h-5 w-5" />
+            </a>
+          </div>
           <button
             type="button"
             className="lg:hidden p-2 text-text-light hover:text-primary transition-colors"

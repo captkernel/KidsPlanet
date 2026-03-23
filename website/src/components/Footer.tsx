@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Facebook, Instagram, MapPin, Phone, Mail } from "lucide-react";
-import { SCHOOL, NAV_LINKS } from "@/lib/constants";
+import { Facebook, Instagram, MapPin, Phone, Mail, Star, Newspaper } from "lucide-react";
+import { SCHOOL, FOOTER_LINKS } from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -51,7 +51,7 @@ export default function Footer() {
               Quick Links
             </h3>
             <ul className="space-y-2">
-              {NAV_LINKS.map((link) => (
+              {FOOTER_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -93,6 +93,21 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Trust Signals */}
+      <div className="border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-white/60">
+          <div className="flex items-center gap-1.5">
+            <Star size={12} className="fill-accent text-accent" />
+            <span>4.4/5 rating from 23 reviews on JustDial</span>
+          </div>
+          <span className="hidden sm:inline">&middot;</span>
+          <div className="flex items-center gap-1.5">
+            <Newspaper size={12} className="text-accent" />
+            <span>Featured in Amar Ujala</span>
           </div>
         </div>
       </div>
