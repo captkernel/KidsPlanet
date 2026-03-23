@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2d5016;
+  --color-primary-light: #4a7c28;
+  --color-primary-dark: #1a3a1a;
+
+  --color-accent: #c8a84e;
+  --color-accent-light: #e0c878;
+  --color-accent-dark: #a88a30;
+
+  --color-surface: #ffffff;
+  --color-surface-cream: #f8f5ef;
+  --color-surface-muted: #f5f0e8;
+
+  --color-text: #1a1a1a;
+  --color-text-muted: #888888;
+  --color-text-light: #5a5a4a;
+
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+@layer base {
+  body {
+    @apply bg-surface-cream text-text antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-bold text-primary-dark;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-md font-semibold text-sm
+           hover:bg-primary-light transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-primary text-primary px-6 py-3 rounded-md font-semibold text-sm
+           hover:bg-primary hover:text-white transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-surface rounded-xl shadow-card p-6;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8 lg:px-16;
+  }
+
+  .trust-strip {
+    @apply bg-surface-muted p-4 rounded-lg border-l-4 border-primary;
+  }
+}
