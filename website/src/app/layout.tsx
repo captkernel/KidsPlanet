@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { SCHOOL } from "@/lib/constants";
+import { getSchoolJsonLd } from "@/lib/metadata";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
@@ -43,6 +44,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${plusJakarta.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(getSchoolJsonLd()) }}
+        />
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
