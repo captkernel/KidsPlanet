@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1",
+    "category": "admissions",
+    "question": "What is the admission process at Kids Planet?",
+    "answer": "The process is simple: (1) Submit an inquiry via our website or WhatsApp, (2) Visit the school for a tour, (3) Submit required documents (birth certificate, Aadhar card, photos, previous school TC if applicable), (4) Complete fee payment to confirm admission."
+  },
+  {
+    "id": "2",
+    "category": "admissions",
+    "question": "What is the age criteria for each class?",
+    "answer": "Playgroup: 2–3 years, Nursery: 3–4 years, KG: 4–5 years, Class 1: 5–6 years (age as of March 31 of the admission year). For Classes 2–8, transfer certificate from previous school is required."
+  },
+  {
+    "id": "3",
+    "category": "admissions",
+    "question": "When do admissions open for the new session?",
+    "answer": "Admissions typically open in January for the April session. However, we accept applications throughout the year based on seat availability. Contact us at +91 98180 97475 for current availability."
+  },
+  {
+    "id": "4",
+    "category": "admissions",
+    "question": "What documents are required for admission?",
+    "answer": "Birth certificate, Aadhar card (child and parent), 4 passport-size photographs, address proof, and transfer certificate from previous school (for Class 2 and above)."
+  },
+  {
+    "id": "5",
+    "category": "admissions",
+    "question": "Can I visit the school before applying?",
+    "answer": "Absolutely! We encourage parents to visit and see our classrooms, meet teachers, and understand our approach. Call us at +91 98180 97475 or WhatsApp to schedule a visit during school hours."
+  },
+  {
+    "id": "6",
+    "category": "academics",
+    "question": "Which board is Kids Planet affiliated with?",
+    "answer": "Kids Planet follows the HP State Board (HPBOSE) curriculum for Classes 1–8. Our pre-school program follows a play-based approach aligned with NEP 2020 guidelines."
+  },
+  {
+    "id": "7",
+    "category": "academics",
+    "question": "What subjects are taught?",
+    "answer": "Core subjects include English, Hindi, Mathematics, Science, Social Studies, and Sanskrit (from Class 6). We also offer Art & Craft, Physical Education, Computer Awareness, and Moral Science."
+  },
+  {
+    "id": "8",
+    "category": "academics",
+    "question": "How is the pre-school curriculum structured?",
+    "answer": "Our pre-school follows a play-based learning approach focusing on language development, number concepts, motor skills, social skills, and creative expression through stories, songs, art, and structured play activities."
+  },
+  {
+    "id": "9",
+    "category": "academics",
+    "question": "Does the school give homework?",
+    "answer": "Yes, age-appropriate homework is given. Pre-school children get light activities to do with parents. Primary students get 30–45 minutes of homework, and middle school students get about 1 hour. Weekend homework is kept minimal."
+  },
+  {
+    "id": "10",
+    "category": "academics",
+    "question": "How are exams conducted?",
+    "answer": "Pre-school assessment is continuous and activity-based — no formal exams. Classes 1–8 follow the HPBOSE pattern with periodic tests, half-yearly exams, and annual exams. Report cards are shared with parents each term."
+  },
+  {
+    "id": "11",
+    "category": "school-life",
+    "question": "What are the school timings?",
+    "answer": "Monday to Friday: 9:00 AM – 3:00 PM. Saturday: 9:00 AM – 1:00 PM. Sunday: Closed. Pre-school children (Playgroup & Nursery) have a shorter day: 9:00 AM – 12:30 PM."
+  },
+  {
+    "id": "12",
+    "category": "school-life",
+    "question": "Is transport facility available?",
+    "answer": "Currently, the school does not operate its own transport. However, many parents arrange shared auto-rickshaws or private transport. The school is centrally located in Dhalpur, easily accessible from most parts of Kullu."
+  },
+  {
+    "id": "13",
+    "category": "school-life",
+    "question": "What about lunch and snacks?",
+    "answer": "Students bring their own lunch and water bottle. We have a dedicated lunch break of 30 minutes. Junk food is discouraged. Pre-school children have a mid-morning snack break as well."
+  },
+  {
+    "id": "14",
+    "category": "school-life",
+    "question": "Is there a school uniform?",
+    "answer": "Yes, students wear a prescribed school uniform on regular days. Specific details about the uniform are shared at the time of admission. Sports uniform is worn on designated sports days."
+  },
+  {
+    "id": "15",
+    "category": "school-life",
+    "question": "What safety measures are in place?",
+    "answer": "The school has CCTV surveillance, a secure entry/exit system, trained staff for first aid, and a strict visitor management policy. All staff undergo background verification. Fire safety equipment is maintained as per norms."
+  },
+  {
+    "id": "16",
+    "category": "school-life",
+    "question": "What extracurricular activities are offered?",
+    "answer": "We offer Art & Craft, Music, Dance, Sports (cricket, badminton, athletics), Annual Day performances, Sports Day, Republic Day and Independence Day celebrations, Holi and Diwali events, and educational excursions."
+  },
+  {
+    "id": "17",
+    "category": "fees",
+    "question": "What is the fee structure?",
+    "answer": "Fee details are shared during the school visit or upon inquiry. Fees vary by class level and include tuition, activity charges, and examination fees. We offer installment payment options. Contact us at +91 98180 97475 for the current fee structure."
+  },
+  {
+    "id": "18",
+    "category": "fees",
+    "question": "Are there any additional charges beyond tuition?",
+    "answer": "Apart from tuition fees, there is a one-time admission fee and annual charges covering books, stationery, and activity materials. Uniform costs are separate. There are no hidden charges."
+  },
+  {
+    "id": "19",
+    "category": "fees",
+    "question": "Is there a sibling discount?",
+    "answer": "Yes, we offer a sibling discount for families enrolling more than one child. Please inquire at the school office or contact us for details."
+  },
+  {
+    "id": "20",
+    "category": "fees",
+    "question": "What are the payment options?",
+    "answer": "Fees can be paid quarterly, half-yearly, or annually. We accept cash, bank transfer, and UPI payments. Details are provided at the time of admission."
+  }
+]

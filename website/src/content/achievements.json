@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "title": "15 Years of Educational Excellence",
+    "year": "2024",
+    "category": "school",
+    "description": "Completed 15 years of nurturing students in Kullu Valley, growing from a small preschool to a full K-8 school with 13 classrooms."
+  },
+  {
+    "id": "2",
+    "title": "4.4★ Rating on JustDial",
+    "year": "2025",
+    "category": "school",
+    "description": "Recognized as one of the best pre-schools in Kullu with a 4.4 out of 5 rating based on 23 parent reviews."
+  },
+  {
+    "id": "3",
+    "title": "Annual Function Featured in Amar Ujala",
+    "year": "2026",
+    "category": "cultural",
+    "description": "Our annual function was covered by Amar Ujala newspaper — 'Students Added Colour To The Annual Function' — showcasing student performances and cultural talents."
+  },
+  {
+    "id": "4",
+    "title": "District-Level Drawing Competition Winners",
+    "year": "2025",
+    "category": "academic",
+    "description": "Three students won prizes at the district-level drawing competition organized by the Kullu District Administration."
+  },
+  {
+    "id": "5",
+    "title": "100% Pass Rate — HPBOSE Class 8",
+    "year": "2025",
+    "category": "academic",
+    "description": "All students appearing for the HPBOSE Class 8 examinations passed with distinction, maintaining our consistent academic record."
+  },
+  {
+    "id": "6",
+    "title": "Inter-School Sports Day Champions",
+    "year": "2024",
+    "category": "sports",
+    "description": "Our students won multiple medals in athletics and badminton at the inter-school sports meet organized in Kullu."
+  },
+  {
+    "id": "7",
+    "title": "Republic Day Cultural Program",
+    "year": "2026",
+    "category": "cultural",
+    "description": "Students performed patriotic songs, dances, and skits at the Republic Day celebrations, appreciated by parents and community members."
+  },
+  {
+    "id": "8",
+    "title": "Science Exhibition",
+    "year": "2025",
+    "category": "academic",
+    "description": "Students from Classes 5-8 showcased innovative science projects on environmental conservation and renewable energy."
+  },
+  {
+    "id": "9",
+    "title": "Best Handwriting Award — District Level",
+    "year": "2024",
+    "category": "academic",
+    "description": "Two students received the Best Handwriting Award at a district-level competition organized by the education department."
+  },
+  {
+    "id": "10",
+    "title": "Annual Sports Day",
+    "year": "2025",
+    "category": "sports",
+    "description": "Over 200 students participated in various athletic events including races, relay, long jump, and team sports during the Annual Sports Day."
+  }
+]

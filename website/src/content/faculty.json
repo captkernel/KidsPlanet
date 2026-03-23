@@ -1,0 +1,82 @@
+[
+  {
+    "id": "neeta-parmar",
+    "name": "Mrs. Neeta Parmar",
+    "designation": "Founder & Principal",
+    "qualification": "M.A., B.Ed.",
+    "experience": "25+ years",
+    "initials": "NP",
+    "bio": "Founded Kids Planet in 2010 with a vision to provide quality education in Kullu Valley. Leads the school with dedication and passion for nurturing young minds.",
+    "featured": true
+  },
+  {
+    "id": "teacher-2",
+    "name": "Mrs. Sunita Sharma",
+    "designation": "Vice Principal & Senior Teacher",
+    "qualification": "M.Sc., B.Ed.",
+    "experience": "15+ years",
+    "initials": "SS",
+    "bio": "Oversees academic planning and curriculum development for primary and middle school sections.",
+    "featured": false
+  },
+  {
+    "id": "teacher-3",
+    "name": "Mrs. Anita Thakur",
+    "designation": "Pre-School Coordinator",
+    "qualification": "B.A., D.El.Ed.",
+    "experience": "12+ years",
+    "initials": "AT",
+    "bio": "Specializes in early childhood education with a focus on play-based learning and creative development.",
+    "featured": false
+  },
+  {
+    "id": "teacher-4",
+    "name": "Mr. Rajesh Kumar",
+    "designation": "Mathematics & Science Teacher",
+    "qualification": "M.Sc. (Mathematics), B.Ed.",
+    "experience": "10+ years",
+    "initials": "RK",
+    "bio": "Makes complex concepts accessible through hands-on experiments and real-world applications.",
+    "featured": false
+  },
+  {
+    "id": "teacher-5",
+    "name": "Mrs. Priya Verma",
+    "designation": "English & Social Studies Teacher",
+    "qualification": "M.A. (English), B.Ed.",
+    "experience": "8+ years",
+    "initials": "PV",
+    "bio": "Encourages creative writing and critical thinking among students through interactive teaching methods.",
+    "featured": false
+  },
+  {
+    "id": "teacher-6",
+    "name": "Mrs. Meena Devi",
+    "designation": "Hindi & Sanskrit Teacher",
+    "qualification": "M.A. (Hindi), B.Ed.",
+    "experience": "10+ years",
+    "initials": "MD",
+    "bio": "Passionate about preserving Indian languages and culture while making learning engaging for students.",
+    "featured": false
+  },
+  {
+    "id": "teacher-7",
+    "name": "Mr. Vikram Singh",
+    "designation": "Sports & Physical Education",
+    "qualification": "B.P.Ed., M.P.Ed.",
+    "experience": "7+ years",
+    "initials": "VS",
+    "bio": "Trains students in various sports and ensures physical fitness through structured activity programs.",
+    "featured": false
+  },
+  {
+    "id": "teacher-8",
+    "name": "Mrs. Kavita Rana",
+    "designation": "Art & Craft Teacher",
+    "qualification": "B.F.A., D.El.Ed.",
+    "experience": "6+ years",
+    "initials": "KR",
+    "bio": "Nurtures creativity and artistic expression in students through painting, craft, and performing arts.",
+    "featured": false
+  }
+]
