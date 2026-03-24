@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/admissions/page": "/admissions",
+  "/attendance/page": "/attendance",
+  "/calendar/page": "/calendar",
+  "/communication/page": "/communication",
+  "/content-studio/page": "/content-studio",
+  "/favicon.ico/route": "/favicon.ico",
+  "/finance/page": "/finance",
+  "/page": "/",
+  "/reports/page": "/reports",
+  "/staff/page": "/staff",
+  "/students/page": "/students",
+  "/website/page": "/website"
+}

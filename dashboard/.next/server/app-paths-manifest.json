@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admissions/page": "app/admissions/page.js",
+  "/attendance/page": "app/attendance/page.js",
+  "/calendar/page": "app/calendar/page.js",
+  "/communication/page": "app/communication/page.js",
+  "/content-studio/page": "app/content-studio/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/finance/page": "app/finance/page.js",
+  "/page": "app/page.js",
+  "/reports/page": "app/reports/page.js",
+  "/staff/page": "app/staff/page.js",
+  "/students/page": "app/students/page.js",
+  "/website/page": "app/website/page.js"
+}

@@ -1,0 +1,3 @@
+:HL["/_next/static/chunks/03zd0fba1i_0b.css","style"]
+:HL["/_next/static/media/fba5a26ea33df6a3-s.p.0eehd8tgys7nv.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"attendance","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"SFCKLS0bQrI5xR2rk-oaX"}

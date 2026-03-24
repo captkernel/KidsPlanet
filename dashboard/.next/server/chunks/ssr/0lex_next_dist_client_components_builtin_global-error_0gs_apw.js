@@ -1,0 +1,3 @@
+module.exports=[84997,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(78870);a.n(d("[project]/Documents/KidsPlanet/dashboard/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},11798,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(78870);a.n(d("[project]/Documents/KidsPlanet/dashboard/node_modules/next/dist/client/components/builtin/global-error.js"))},21343,a=>{"use strict";a.i(84997);var b=a.i(11798);a.n(b)},14962,a=>{a.n(a.i(21343))}];
+
+//# sourceMappingURL=0lex_next_dist_client_components_builtin_global-error_0gs_apw.js.map
