@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Kids Planet — Admission Flyer</title>
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+body { width: 210mm; min-height: 297mm; background: #f8f5ef; }
+.page { width: 210mm; min-height: 297mm; position: relative; overflow: hidden; }
+.header { background: #2d5016; color: white; padding: 32px 40px; position: relative; }
+.header::after { content: ''; position: absolute; bottom: -30px; left: 0; right: 0; height: 60px; background: #2d5016; border-radius: 0 0 50% 50%; }
+.logo { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; position: relative; z-index: 1; }
+.logo-icon { width: 56px; height: 56px; background: #c8a84e; color: #1a3a1a; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 22px; }
+.logo-text { font-size: 28px; font-weight: 800; }
+.logo-sub { font-size: 12px; opacity: 0.8; letter-spacing: 1px; }
+.headline { position: relative; z-index: 1; }
+.headline h1 { font-size: 36px; font-weight: 800; line-height: 1.1; }
+.headline h1 span { color: #e0c878; }
+.badge { display: inline-block; background: #dc2626; color: white; font-size: 11px; font-weight: 700; padding: 4px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+.content { padding: 50px 40px 30px; }
+.positioning { text-align: center; font-size: 13px; font-weight: 600; color: #c8a84e; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 24px; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 30px; }
+.stat { background: white; border-radius: 12px; padding: 16px 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.stat-value { font-size: 24px; font-weight: 800; color: #2d5016; }
+.stat-label { font-size: 10px; color: #888888; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+.why-section { margin-bottom: 28px; }
+.why-title { font-size: 20px; font-weight: 800; color: #1a3a1a; margin-bottom: 16px; text-align: center; }
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.why-item { background: white; border-radius: 10px; padding: 14px 16px; display: flex; align-items: flex-start; gap: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+.why-check { width: 22px; height: 22px; background: #2d5016; border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; margin-top: 1px; }
+.why-text { font-size: 12px; color: #5a5a4a; line-height: 1.4; }
+.why-text strong { color: #1a3a1a; }
+.seats { background: #1a3a1a; color: white; border-radius: 14px; padding: 24px; text-align: center; margin-bottom: 28px; }
+.seats h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+.seats p { font-size: 13px; opacity: 0.8; }
+.seats .urgent { color: #e0c878; font-weight: 700; font-size: 15px; margin-top: 8px; }
+.contact { background: white; border-radius: 14px; padding: 24px; border: 2px solid #2d501620; }
+.contact-title { font-size: 16px; font-weight: 700; color: #1a3a1a; margin-bottom: 14px; text-align: center; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.contact-item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #5a5a4a; }
+.contact-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+.contact-icon.phone { background: #2d501615; color: #2d5016; }
+.contact-icon.whatsapp { background: #25D36615; color: #25D366; }
+.contact-icon.email { background: #c8a84e20; color: #c8a84e; }
+.contact-icon.location { background: #2d501610; color: #2d5016; }
+.footer { background: #2d5016; color: white; padding: 16px 40px; text-align: center; font-size: 11px; opacity: 0.9; position: absolute; bottom: 0; left: 0; right: 0; }
+</style></head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="logo">
+      <div class="logo-icon">KP</div>
+      <div><div class="logo-text">Kids Planet</div><div class="logo-sub">Kullu Valley · Since 2010</div></div>
+    </div>
+    <div class="headline">
+      <div class="badge">Admissions Open 2026–27</div>
+      <h1>Where Your Child's <span>Brightest Future Begins</span></h1>
+    </div>
+  </div>
+  <div class="content">
+    <div class="positioning">Kullu Valley's Dedicated Early Childhood Learning Center</div>
+    <div class="stats">
+      <div class="stat"><div class="stat-value">15+</div><div class="stat-label">Years</div></div>
+      <div class="stat"><div class="stat-value">13</div><div class="stat-label">Classrooms</div></div>
+      <div class="stat"><div class="stat-value">20:1</div><div class="stat-label">Student Ratio</div></div>
+      <div class="stat"><div class="stat-value">4.4★</div><div class="stat-label">Rating</div></div>
+    </div>
+    <div class="why-section">
+      <div class="why-title">Why Parents Choose Kids Planet</div>
+      <div class="why-grid">
+        <div class="why-item"><div class="why-check">✓</div><div class="why-text"><strong>Dedicated preschool</strong> — not a side program of a bigger school</div></div>
+        <div class="why-item"><div class="why-check">✓</div><div class="why-text"><strong>Small class sizes</strong> under 25 students for personal attention</div></div>
+        <div class="why-item"><div class="why-check">✓</div><div class="why-text"><strong>Founder-led</strong> — Mrs. Neeta Parmar knows every child</div></div>
+        <div class="why-item"><div class="why-check">✓</div><div class="why-text"><strong>Play-based learning</strong> aligned with NEP 2020 for ages 2–6</div></div>
+        <div class="why-item"><div class="why-check">✓</div><div class="why-text"><strong>Daily updates</strong> to parents via WhatsApp</div></div>
+        <div class="why-item"><div class="why-check">✓</div><div class="why-text"><strong>15+ years</strong> of trusted education in Kullu Valley</div></div>
+      </div>
+    </div>
+    <div class="seats">
+      <h3>🪑 Seats Filling Fast for 2026–27</h3>
+      <p>Playgroup · Nursery · KG · Class 1–8</p>
+      <div class="urgent">Limited seats available — Don't wait!</div>
+    </div>
+    <div class="contact">
+      <div class="contact-title">📞 Inquire Today</div>
+      <div class="contact-grid">
+        <div class="contact-item"><div class="contact-icon phone">📱</div><div>Call: <strong>+91 98180 97475</strong></div></div>
+        <div class="contact-item"><div class="contact-icon whatsapp">💬</div><div>WhatsApp: <strong>+91 98180 97475</strong></div></div>
+        <div class="contact-item"><div class="contact-icon email">✉</div><div>kidsplanetkullu@gmail.com</div></div>
+        <div class="contact-item"><div class="contact-icon location">📍</div><div>Above Circuit House, Miyanbehar, Dhalpur, Kullu — 175101</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">Kids Planet · kidsplanetkullu.com · facebook.com/kidsplanet2010</div>
+</div>
+</body></html>

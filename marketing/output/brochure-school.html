@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Kids Planet — School Brochure</title>
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+body { width: 210mm; background: white; }
+@media print { .page { page-break-after: always; } .page:last-child { page-break-after: auto; } }
+.page { width: 210mm; min-height: 297mm; position: relative; overflow: hidden; }
+
+/* Page 1 — Cover */
+.cover { background: linear-gradient(135deg, #1a3a1a 0%, #2d5016 100%); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 60px; }
+.cover::before { content: ''; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; border-radius: 50%; background: rgba(255,255,255,0.03); }
+.cover::after { content: ''; position: absolute; bottom: -80px; left: -80px; width: 300px; height: 300px; border-radius: 50%; background: rgba(255,255,255,0.02); }
+.cover * { position: relative; z-index: 1; }
+.cover .logo-icon { width: 80px; height: 80px; background: #c8a84e; color: #1a3a1a; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 32px; margin: 0 auto 24px; }
+.cover h1 { font-size: 42px; font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
+.cover h1 span { color: #e0c878; }
+.cover .positioning { font-size: 14px; text-transform: uppercase; letter-spacing: 4px; color: #e0c878; margin-bottom: 40px; }
+.cover .tagline { font-size: 20px; opacity: 0.85; max-width: 500px; line-height: 1.6; margin: 0 auto 48px; }
+.cover .stats { display: flex; gap: 24px; justify-content: center; }
+.cover .stat { background: rgba(255,255,255,0.1); border-radius: 14px; padding: 20px 28px; text-align: center; }
+.cover .stat-val { font-size: 28px; font-weight: 800; }
+.cover .stat-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; margin-top: 4px; }
+.cover .contact-bar { position: absolute; bottom: 40px; left: 0; right: 0; text-align: center; font-size: 13px; opacity: 0.7; }
+
+/* Page 2 — Inside */
+.inside { background: #f8f5ef; padding: 48px; }
+.inside h2 { font-size: 26px; font-weight: 800; color: #1a3a1a; margin-bottom: 8px; }
+.inside .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 3px; color: #c8a84e; font-weight: 600; margin-bottom: 6px; }
+.inside .subtitle { font-size: 14px; color: #5a5a4a; margin-bottom: 24px; }
+.inside .divider { width: 40px; height: 3px; background: #c8a84e; border-radius: 2px; margin: 32px 0; }
+
+.programs-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 8px; }
+.program-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.program-card h4 { font-size: 14px; font-weight: 700; color: #1a3a1a; margin-bottom: 4px; }
+.program-card .age { font-size: 11px; color: #c8a84e; font-weight: 600; margin-bottom: 8px; }
+.program-card p { font-size: 11px; color: #5a5a4a; line-height: 1.5; }
+
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.why-card { background: white; border-radius: 10px; padding: 16px; border-left: 3px solid #2d5016; }
+.why-card h5 { font-size: 12px; font-weight: 700; color: #1a3a1a; margin-bottom: 4px; }
+.why-card p { font-size: 11px; color: #5a5a4a; line-height: 1.5; }
+
+.cta-bar { background: #2d5016; color: white; border-radius: 14px; padding: 28px; text-align: center; margin-top: 32px; }
+.cta-bar h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+.cta-bar p { font-size: 13px; opacity: 0.8; }
+.cta-bar .phone { font-size: 22px; font-weight: 800; color: #e0c878; margin-top: 12px; }
+</style></head>
+<body>
+
+<!-- Page 1: Cover -->
+<div class="page cover">
+  <div class="logo-icon">KP</div>
+  <div class="positioning">Kullu Valley's Dedicated Early Childhood Learning Center</div>
+  <h1>Where Your Child's <span>Brightest Future Begins</span></h1>
+  <div class="tagline">Founded by Mrs. Neeta Parmar in 2010, Kids Planet is Kullu Valley's most trusted school for quality education from Playgroup to Class 8.</div>
+  <div class="stats">
+    <div class="stat"><div class="stat-val">15+</div><div class="stat-lbl">Years</div></div>
+    <div class="stat"><div class="stat-val">13</div><div class="stat-lbl">Classrooms</div></div>
+    <div class="stat"><div class="stat-val">20:1</div><div class="stat-lbl">Ratio</div></div>
+    <div class="stat"><div class="stat-val">4.4★</div><div class="stat-lbl">Rating</div></div>
+  </div>
+  <div class="contact-bar">+91 98180 97475 · kidsplanetkullu@gmail.com · kidsplanetkullu.com</div>
+</div>
+
+<!-- Page 2: Inside -->
+<div class="page inside">
+  <div class="section-label">Academics</div>
+  <h2>Our Programs</h2>
+  <div class="subtitle">Comprehensive education from ages 2 to 14, aligned with HPBOSE curriculum</div>
+  <div class="programs-grid">
+    <div class="program-card"><h4>Playgroup & Nursery</h4><div class="age">Ages 2–4</div><p>Play-based introduction to learning, creativity, social skills, and motor development.</p></div>
+    <div class="program-card"><h4>Kindergarten</h4><div class="age">Ages 4–6</div><p>Structured readiness for school with phonics, number concepts, and hands-on activities.</p></div>
+    <div class="program-card"><h4>Primary (1–5)</h4><div class="age">Ages 6–11</div><p>Strong academic foundation with HPBOSE curriculum, art, sports, and computer awareness.</p></div>
+    <div class="program-card"><h4>Middle (6–8)</h4><div class="age">Ages 11–14</div><p>Comprehensive academics with Science, Mathematics, English, Hindi, Sanskrit, and Social Studies.</p></div>
+    <div class="program-card"><h4>Activities</h4><div class="age">All Ages</div><p>Art & Craft, Music, Dance, Sports, Annual Day, Sports Day, educational excursions.</p></div>
+    <div class="program-card"><h4>Values</h4><div class="age">All Ages</div><p>Moral Science, community service, cultural celebrations, and character-building programs.</p></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">The Kids Planet Difference</div>
+  <h2>Why Parents Choose Us</h2>
+  <div class="subtitle">We don't just teach — we nurture confident, curious learners</div>
+  <div class="why-grid">
+    <div class="why-card"><h5>Dedicated Preschool Focus</h5><p>Unlike other schools, preschool isn't a side program here — it's our entire mission and expertise.</p></div>
+    <div class="why-card"><h5>Founder-Led, Family-Run</h5><p>Mrs. Neeta Parmar personally knows every child and leads with 25+ years of teaching experience.</p></div>
+    <div class="why-card"><h5>Small Class Sizes</h5><p>With a 20:1 ratio, every child gets the personal attention they deserve.</p></div>
+    <div class="why-card"><h5>Daily Parent Updates</h5><p>Stay connected with your child's day through regular WhatsApp updates and photos.</p></div>
+  </div>
+
+  <div class="cta-bar">
+    <h3>Reserve Your Child's Seat for 2026–27</h3>
+    <p>Limited seats available · Admissions open now</p>
+    <div class="phone">+91 98180 97475</div>
+  </div>
+</div>
+
+</body></html>
