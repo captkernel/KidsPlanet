@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { MapPin, Users, Building, Award } from "lucide-react";
 import { SCHOOL } from "@/lib/constants";
 import FadeIn from "@/components/FadeIn";
@@ -55,6 +56,39 @@ export default function AboutPage() {
             <p className="mx-auto mt-6 max-w-2xl text-lg text-text-muted">
               {SCHOOL.description}
             </p>
+          </FadeIn>
+
+          {/* Campus images */}
+          <FadeIn delay={0.2}>
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+              <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+                <Image
+                  src="/images/campus/building-exterior.jpg"
+                  alt="Kids Planet school building"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+              <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+                <Image
+                  src="/images/campus/morning-assembly.jpg"
+                  alt="Morning assembly at Kids Planet"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+              <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+                <Image
+                  src="/images/faculty/faculty-group.jpg"
+                  alt="Kids Planet faculty team"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+            </div>
           </FadeIn>
         </div>
       </section>

@@ -1,4 +1,5 @@
-import { GraduationCap, BookOpen, School } from "lucide-react";
+import Link from "next/link";
+import { GraduationCap, BookOpen, School, ArrowRight } from "lucide-react";
 
 interface Program {
   id: string;
@@ -15,18 +16,21 @@ const levelConfig = {
     iconBg: "bg-accent-light/30",
     iconColor: "text-accent-dark",
     pillBg: "bg-accent-light/20 text-accent-dark",
+    border: "border-t-4 border-t-accent",
   },
   primary: {
     Icon: BookOpen,
     iconBg: "bg-primary/10",
     iconColor: "text-primary",
     pillBg: "bg-primary/10 text-primary-dark",
+    border: "border-t-4 border-t-primary",
   },
   middle: {
     Icon: School,
     iconBg: "bg-primary-dark/10",
     iconColor: "text-primary-dark",
     pillBg: "bg-primary-dark/10 text-primary-dark",
+    border: "border-t-4 border-t-primary-dark",
   },
 };
 
@@ -35,27 +39,29 @@ export function ProgramCard({ program }: { program: Program }) {
   const { Icon } = config;
 
   return (
-    <div className="card flex flex-col gap-4">
-      {/* Icon */}
-      <div
-        className={`flex h-12 w-12 items-center justify-center rounded-lg ${config.iconBg}`}
-      >
-        <Icon className={`h-6 w-6 ${config.iconColor}`} />
+    <div className={`card flex flex-col gap-4 ${config.border}`}>
+      {/* Icon + age badge */}
+      <div className="flex items-center justify-between">
+        <div
+          className={`flex h-12 w-12 items-center justify-center rounded-xl ${config.iconBg}`}
+        >
+          <Icon className={`h-6 w-6 ${config.iconColor}`} />
+        </div>
+        <span className="text-xs font-semibold text-text-muted bg-surface-muted px-3 py-1 rounded-full">
+          {program.ageRange}
+        </span>
       </div>
 
-      {/* Name & age */}
-      <div>
-        <h3 className="text-lg font-bold text-primary-dark">{program.name}</h3>
-        <p className="text-sm text-text-muted">{program.ageRange}</p>
-      </div>
+      {/* Name */}
+      <h3 className="text-lg font-bold text-primary-dark">{program.name}</h3>
 
       {/* Description */}
-      <p className="text-sm text-text-light leading-relaxed">
+      <p className="text-sm text-text-light leading-relaxed flex-1">
         {program.description}
       </p>
 
       {/* Highlights */}
-      <div className="mt-auto flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-1.5">
         {program.highlights.map((h) => (
           <span
             key={h}
@@ -65,6 +71,15 @@ export function ProgramCard({ program }: { program: Program }) {
           </span>
         ))}
       </div>
+
+      {/* CTA */}
+      <Link
+        href="/admissions"
+        className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary-light transition-colors mt-1 group"
+      >
+        Enquire Now
+        <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
+      </Link>
     </div>
   );
 }

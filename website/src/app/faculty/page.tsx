@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import SectionHeading from "@/components/SectionHeading";
 import FacultyCard from "@/components/FacultyCard";
 import FadeIn from "@/components/FadeIn";
@@ -25,6 +26,18 @@ export default function FacultyPage() {
             A team of dedicated and experienced educators committed to
             nurturing every child&apos;s potential.
           </p>
+
+          {/* Faculty group photo */}
+          <div className="relative mt-8 aspect-[2/1] max-w-2xl mx-auto rounded-xl overflow-hidden">
+            <Image
+              src="/images/faculty/faculty-group.jpg"
+              alt="Kids Planet faculty team"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 672px"
+              priority
+            />
+          </div>
         </div>
       </section>
 
@@ -61,11 +74,12 @@ export default function FacultyPage() {
         </div>
       </section>
 
+      {/* CTA */}
       <section className="section-padding bg-surface text-center">
         <div className="max-w-2xl mx-auto">
-          <p className="text-sm text-text-muted italic">
-            Note: Some faculty details are placeholders and will be updated with
-            actual information. Contact us for the latest staff directory.
+          <p className="text-sm text-text-muted">
+            Interested in joining our team? We are always looking for passionate
+            educators. Contact us at <strong>+91 98180 97475</strong> for current openings.
           </p>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import SectionHeading from "@/components/SectionHeading";
 import DailySchedule from "@/components/DailySchedule";
 import FadeIn from "@/components/FadeIn";
@@ -49,6 +50,19 @@ export default function DailyLifePage() {
             See what a typical school day looks like — from morning assembly to
             afternoon dispersal, every hour is planned for growth.
           </p>
+
+          {/* Daily life photo strip */}
+          <div className="mt-8 grid grid-cols-3 gap-3 max-w-3xl mx-auto">
+            <div className="relative aspect-square rounded-xl overflow-hidden">
+              <Image src="/images/sports/morning-exercise.jpg" alt="Morning exercise" fill className="object-cover" sizes="33vw" />
+            </div>
+            <div className="relative aspect-square rounded-xl overflow-hidden">
+              <Image src="/images/classroom/students-in-class.jpg" alt="Classroom learning" fill className="object-cover" sizes="33vw" />
+            </div>
+            <div className="relative aspect-square rounded-xl overflow-hidden">
+              <Image src="/images/activities/group-painting.jpg" alt="Art activity time" fill className="object-cover" sizes="33vw" />
+            </div>
+          </div>
         </div>
       </section>
 

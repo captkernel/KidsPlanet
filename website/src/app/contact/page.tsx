@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import MapEmbed from "@/components/MapEmbed";
+import InquiryForm from "@/components/InquiryForm";
+import SectionHeading from "@/components/SectionHeading";
 import FadeIn from "@/components/FadeIn";
 import { SCHOOL } from "@/lib/constants";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
@@ -113,6 +115,17 @@ export default function ContactPage() {
               <MapEmbed />
             </FadeIn>
           </div>
+        </div>
+      </section>
+
+      {/* Inquiry Form */}
+      <section className="section-padding bg-surface-cream">
+        <div className="max-w-3xl mx-auto">
+          <SectionHeading
+            title="Send Us a Message"
+            subtitle="Fill out the form below and we'll get back to you shortly"
+          />
+          <InquiryForm />
         </div>
       </section>
     </>

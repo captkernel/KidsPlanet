@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import SectionHeading from "@/components/SectionHeading";
 import InquiryForm from "@/components/InquiryForm";
 import FadeIn from "@/components/FadeIn";
@@ -31,6 +32,18 @@ export default function AdmissionsPage() {
             education. From Playgroup to Class 8, every child gets the attention
             they deserve.
           </p>
+
+          {/* Admissions hero image */}
+          <div className="relative mt-8 aspect-[21/9] max-w-2xl mx-auto rounded-xl overflow-hidden">
+            <Image
+              src="/images/classroom/class-group-photo.jpg"
+              alt="Happy students at Kids Planet"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 672px"
+              priority
+            />
+          </div>
         </div>
       </section>
 

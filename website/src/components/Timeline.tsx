@@ -3,27 +3,39 @@ import FadeIn from "@/components/FadeIn";
 const milestones = [
   {
     year: "2010",
-    title: "Founded",
+    title: "A Dream Takes Shape",
     description:
-      "Mrs. Neeta Parmar established Kids Planet in Kullu with a vision to provide quality education from the earliest years.",
+      "Mrs. Neeta Parmar founded Kids Planet in Kullu — the valley's first dedicated preschool — starting with a small group of children and a big vision for quality early education.",
   },
   {
     year: "2013",
-    title: "Expanded to Primary",
+    title: "Growing With the Community",
     description:
-      "Added Classes 1–5 to the curriculum, growing from a pre-school into a full primary institution.",
+      "Added Classes 1–5, responding to parents who didn't want their children to leave the Kids Planet family. The school joined Facebook to connect with Kullu Valley families.",
   },
   {
     year: "2018",
-    title: "Middle School Added",
+    title: "Full K–8 School",
     description:
-      "Extended to Class 8 with HP State Board (HPBOSE) affiliation, offering a complete K-8 education.",
+      "Extended to Class 8 with HP State Board (HPBOSE) affiliation. First batch of Class 8 graduates received a heartfelt farewell — a tradition that continues every year.",
+  },
+  {
+    year: "2023",
+    title: "Art & Craft Exhibition",
+    description:
+      "Hosted the grand Kids Planet Art & Craft Exhibition, showcasing student creativity in science models, handmade crafts, and artwork — attended by parents and community members.",
   },
   {
     year: "2024",
-    title: "15 Years of Excellence",
+    title: "15 Years & Community Events",
     description:
-      "Celebrated 15 years of nurturing young minds in Kullu Valley, with hundreds of alumni and a trusted reputation.",
+      "Celebrated 15 years of excellence. Hosted the Kids Planet Fete, celebrated International Yoga Day with the entire school, and organized Children's Day with costume competitions and performances.",
+  },
+  {
+    year: "2026",
+    title: "Featured in Amar Ujala",
+    description:
+      "Kids Planet's Annual Function was covered by Amar Ujala newspaper — 'Students Added Colour To The Annual Function.' 200+ families now trust Kids Planet with their children's future.",
   },
 ];
 

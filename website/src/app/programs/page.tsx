@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { SCHOOL } from "@/lib/constants";
 import FadeIn from "@/components/FadeIn";
 import SectionHeading from "@/components/SectionHeading";
@@ -31,6 +32,8 @@ const sections = [
     title: "Pre-School",
     subtitle: "Ages 2–6 — A play-based introduction to learning, creativity, and social skills.",
     bg: "bg-surface",
+    image: "/images/classroom/teacher-reading.jpg",
+    imageAlt: "Teacher reading to preschool children",
   },
   {
     level: "primary" as const,
@@ -38,6 +41,8 @@ const sections = [
     title: "Primary School",
     subtitle: "Ages 6–11 — Building academic excellence with the HPBOSE curriculum.",
     bg: "bg-surface-cream",
+    image: "/images/classroom/students-in-class.jpg",
+    imageAlt: "Primary students in a bright, modern classroom",
   },
   {
     level: "middle" as const,
@@ -45,6 +50,8 @@ const sections = [
     title: "Middle School",
     subtitle: "Ages 11–14 — Preparing students for higher secondary and beyond.",
     bg: "bg-surface",
+    image: "/images/classroom/circle-time.jpg",
+    imageAlt: "Students in circle time discussion",
   },
 ];
 
@@ -78,13 +85,26 @@ export default function ProgramsPage() {
             className={`section-padding ${section.bg}`}
           >
             <div className="mx-auto max-w-7xl">
-              <FadeIn>
-                <SectionHeading
-                  label={section.label}
-                  title={section.title}
-                  subtitle={section.subtitle}
-                />
-              </FadeIn>
+              <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
+                <FadeIn>
+                  <SectionHeading
+                    label={section.label}
+                    title={section.title}
+                    subtitle={section.subtitle}
+                  />
+                </FadeIn>
+                <FadeIn delay={0.1}>
+                  <div className="relative w-full md:w-64 aspect-[4/3] rounded-xl overflow-hidden shrink-0">
+                    <Image
+                      src={section.image}
+                      alt={section.imageAlt}
+                      fill
+                      className="object-cover"
+                      sizes="256px"
+                    />
+                  </div>
+                </FadeIn>
+              </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {programs.map((program, i) => (

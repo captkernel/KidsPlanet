@@ -1,5 +1,15 @@
 .env
 node_modules/
 .superpowers/
+.claude/
 agents/backups/
 agents/logs/
+.next/
+out/
+.turbo/
+*.tsbuildinfo
+Media/
+dashboard/
+docs/
+marketing/
+research/

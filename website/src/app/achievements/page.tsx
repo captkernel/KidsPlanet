@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import SectionHeading from "@/components/SectionHeading";
 import AchievementCard from "@/components/AchievementCard";
 import FadeIn from "@/components/FadeIn";
@@ -26,6 +27,18 @@ export default function AchievementsPage() {
             Celebrating the accomplishments of our students and school — from
             academic excellence to sports and cultural milestones.
           </p>
+
+          {/* Trophy photo */}
+          <div className="relative mt-8 aspect-[3/1] max-w-2xl mx-auto rounded-xl overflow-hidden">
+            <Image
+              src="/images/events/trophy-ceremony.jpg"
+              alt="Students celebrating a trophy win at Kids Planet"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 672px"
+              priority
+            />
+          </div>
         </div>
       </section>
 

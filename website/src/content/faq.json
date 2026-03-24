@@ -118,5 +118,29 @@
     "category": "fees",
     "question": "What are the payment options?",
     "answer": "Fees can be paid quarterly, half-yearly, or annually. We accept cash, bank transfer, and UPI payments. Details are provided at the time of admission."
+  },
+  {
+    "id": "21",
+    "category": "admissions",
+    "question": "What are the admission fees and monthly fees?",
+    "answer": "Fee details vary by class level and are shared during the school visit or upon inquiry. We believe in transparent pricing with no hidden charges. Contact us directly at +91 98180 97475 or visit the school (Mon-Sat, 9 AM - 1 PM) for the complete fee breakdown including admission fees, monthly tuition, and any additional charges."
+  },
+  {
+    "id": "22",
+    "category": "school-life",
+    "question": "What services and programs does Kids Planet offer?",
+    "answer": "Kids Planet offers complete education from Playgroup (age 2) through Class 8 (age 14). Our programs include: play-based preschool (Playgroup, Nursery, KG), HPBOSE-aligned primary school (Class 1-5), and middle school (Class 6-8). Beyond academics, we offer art & craft, music, dance, sports, nature excursions, science exhibitions, cultural celebrations, and annual events like Sports Day and Annual Day."
+  },
+  {
+    "id": "23",
+    "category": "admissions",
+    "question": "How do I book a school visit or appointment?",
+    "answer": "You can visit Kids Planet any weekday between 9 AM and 1 PM without a prior appointment. For a guided tour with the Principal, call or WhatsApp us at +91 98180 97475 to schedule a convenient time. We're located at Kids Planet School, Guru Behar, Dhalpur, Kullu — 175101."
+  },
+  {
+    "id": "24",
+    "category": "school-life",
+    "question": "Are there job openings at Kids Planet?",
+    "answer": "We are always looking for passionate, qualified educators to join our team. If you have a B.Ed., D.El.Ed., or relevant teaching qualifications with a love for working with children, contact us at +91 98180 97475 or email us at kidsplanetkullu@gmail.com with your CV."
   }
 ]

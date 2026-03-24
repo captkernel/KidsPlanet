@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SCHOOL } from "@/lib/constants";
 import StatsBar from "@/components/StatsBar";
 import { Star } from "lucide-react";
@@ -51,6 +52,58 @@ export default function Hero() {
         <p className="mt-4 text-xs text-red-600 font-semibold">
           2026–27 admissions open — limited seats available
         </p>
+      </div>
+
+      {/* Hero image collage */}
+      <div className="mt-12 mx-auto max-w-6xl px-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="relative aspect-[4/3] rounded-xl overflow-hidden col-span-2 row-span-2">
+            <Image
+              src="/images/campus/morning-assembly.jpg"
+              alt="Morning assembly at Kids Planet — students in uniform in the school courtyard"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority
+            />
+          </div>
+          <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+            <Image
+              src="/images/classroom/teacher-reading.jpg"
+              alt="Teacher reading a story to preschool children"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 50vw, 25vw"
+            />
+          </div>
+          <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+            <Image
+              src="/images/activities/planting-seedling.jpg"
+              alt="Student planting a seedling — hands-on environmental learning"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 50vw, 25vw"
+            />
+          </div>
+          <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+            <Image
+              src="/images/activities/outdoor-forest-learning.jpg"
+              alt="Outdoor learning in a Kullu Valley pine forest"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 50vw, 25vw"
+            />
+          </div>
+          <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+            <Image
+              src="/images/events/cultural-performance.jpg"
+              alt="Student performing in traditional Himachali dress"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 50vw, 25vw"
+            />
+          </div>
+        </div>
       </div>
 
       {/* Stats bar */}
