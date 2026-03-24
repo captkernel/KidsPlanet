@@ -1,0 +1,53 @@
+{
+  "preschool": {
+    "label": "Pre-School",
+    "subtitle": "Playgroup & Nursery (Ages 2–4)",
+    "timings": "9:00 AM – 12:30 PM",
+    "schedule": [
+      { "time": "9:00 AM", "activity": "Arrival & Free Play", "icon": "smile" },
+      { "time": "9:30 AM", "activity": "Circle Time — Songs & Stories", "icon": "music" },
+      { "time": "10:00 AM", "activity": "Learning Activity — Letters, Numbers, Shapes", "icon": "book-open" },
+      { "time": "10:30 AM", "activity": "Snack Break", "icon": "apple" },
+      { "time": "10:50 AM", "activity": "Art & Craft", "icon": "palette" },
+      { "time": "11:20 AM", "activity": "Outdoor Play & Physical Activity", "icon": "sun" },
+      { "time": "11:50 AM", "activity": "Rhymes, Dance & Music", "icon": "music" },
+      { "time": "12:15 PM", "activity": "Goodbye Circle & Departure", "icon": "heart" }
+    ]
+  },
+  "primary": {
+    "label": "Primary School",
+    "subtitle": "KG – Class 5 (Ages 4–11)",
+    "timings": "9:00 AM – 3:00 PM",
+    "schedule": [
+      { "time": "9:00 AM", "activity": "Morning Assembly & Prayer", "icon": "sun" },
+      { "time": "9:20 AM", "activity": "Period 1 — English / Hindi", "icon": "book-open" },
+      { "time": "10:00 AM", "activity": "Period 2 — Mathematics", "icon": "calculator" },
+      { "time": "10:40 AM", "activity": "Short Break & Snack", "icon": "apple" },
+      { "time": "11:00 AM", "activity": "Period 3 — Science / EVS", "icon": "flask-conical" },
+      { "time": "11:40 AM", "activity": "Period 4 — Social Studies", "icon": "globe" },
+      { "time": "12:20 PM", "activity": "Lunch Break", "icon": "utensils" },
+      { "time": "1:00 PM", "activity": "Period 5 — Art / Music / Sports", "icon": "palette" },
+      { "time": "1:40 PM", "activity": "Period 6 — Computer / Moral Science", "icon": "monitor" },
+      { "time": "2:20 PM", "activity": "Revision & Homework Discussion", "icon": "pencil" },
+      { "time": "2:50 PM", "activity": "Dispersal", "icon": "heart" }
+    ]
+  },
+  "middle": {
+    "label": "Middle School",
+    "subtitle": "Class 6 – Class 8 (Ages 11–14)",
+    "timings": "9:00 AM – 3:00 PM",
+    "schedule": [
+      { "time": "9:00 AM", "activity": "Morning Assembly", "icon": "sun" },
+      { "time": "9:20 AM", "activity": "Period 1 — Mathematics", "icon": "calculator" },
+      { "time": "10:00 AM", "activity": "Period 2 — Science", "icon": "flask-conical" },
+      { "time": "10:40 AM", "activity": "Short Break", "icon": "apple" },
+      { "time": "11:00 AM", "activity": "Period 3 — English", "icon": "book-open" },
+      { "time": "11:40 AM", "activity": "Period 4 — Hindi / Sanskrit", "icon": "book-open" },
+      { "time": "12:20 PM", "activity": "Lunch Break", "icon": "utensils" },
+      { "time": "1:00 PM", "activity": "Period 5 — Social Studies", "icon": "globe" },
+      { "time": "1:40 PM", "activity": "Period 6 — Computer / Physical Ed.", "icon": "monitor" },
+      { "time": "2:20 PM", "activity": "Period 7 — Elective / Library", "icon": "library" },
+      { "time": "2:50 PM", "activity": "Dispersal", "icon": "heart" }
+    ]
+  }
+}
