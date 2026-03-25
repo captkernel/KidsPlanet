@@ -1,0 +1,15 @@
+export const CURATED_ICONS: string[] = [
+  'apple', 'award', 'baby', 'backpack', 'badge-check', 'balloon', 'bell',
+  'bike', 'book', 'book-open', 'bookmark', 'brain', 'brush', 'bus',
+  'cake', 'calculator', 'calendar', 'camera', 'check-circle', 'clock',
+  'cloud', 'crown', 'diamond', 'drum', 'flag', 'flower', 'gamepad-2',
+  'gift', 'globe', 'graduation-cap', 'guitar', 'hand-heart', 'heart',
+  'home', 'ice-cream-cone', 'image', 'lamp', 'leaf', 'library', 'lightbulb',
+  'medal', 'megaphone', 'mic', 'moon', 'mountain', 'music', 'notebook-pen',
+  'palette', 'paw-print', 'pen', 'pencil', 'phone', 'pizza', 'plane',
+  'puzzle', 'rainbow', 'rocket', 'ruler', 'school', 'scissors', 'shield',
+  'smile', 'snowflake', 'sparkle', 'sparkles', 'speaker', 'star',
+  'sticker', 'sun', 'target', 'tent', 'thumbs-up', 'ticket', 'timer',
+  'tree-pine', 'trophy', 'truck', 'umbrella', 'video', 'volleyball',
+  'wand', 'zap',
+]
