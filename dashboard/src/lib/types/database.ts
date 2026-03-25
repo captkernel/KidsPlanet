@@ -191,6 +191,250 @@ export interface Payment {
   updated_at: string
 }
 
+// ── Staff/HR ──
+
+export interface StaffProfile {
+  id: string
+  school_id: string
+  user_id: string | null
+  full_name: string
+  phone: string | null
+  designation: 'teacher' | 'assistant' | 'driver' | 'cook' | 'admin' | 'other' | null
+  class_id: string | null
+  date_of_joining: string | null
+  salary: number | null
+  photo_url: string | null
+  emergency_contact: string | null
+  address: string | null
+  status: 'active' | 'resigned'
+  created_at: string
+  updated_at: string
+}
+
+export interface StaffDocument {
+  id: string
+  staff_id: string
+  school_id: string
+  type: 'id_proof' | 'qualification' | 'police_verification' | 'contract' | 'other'
+  file_url: string
+  expiry_date: string | null
+  created_at: string
+}
+
+export interface LeaveRequest {
+  id: string
+  school_id: string
+  staff_id: string
+  leave_type: 'casual' | 'sick' | 'earned'
+  from_date: string
+  to_date: string
+  reason: string | null
+  status: 'pending' | 'approved' | 'rejected'
+  approved_by: string | null
+  created_at: string
+  updated_at: string
+}
+
+// ── Admissions CRM ──
+
+export interface Inquiry {
+  id: string
+  school_id: string
+  parent_name: string
+  parent_phone: string | null
+  parent_email: string | null
+  child_name: string | null
+  child_dob: string | null
+  class_sought: string | null
+  source: 'website' | 'walkin' | 'referral' | 'social_media' | 'other' | null
+  status: 'new' | 'contacted' | 'visited' | 'enrolled' | 'declined'
+  notes: string | null
+  follow_up_date: string | null
+  assigned_to: string | null
+  created_at: string
+  updated_at: string
+}
+
+// ── Calendar ──
+
+export interface SchoolEvent {
+  id: string
+  school_id: string
+  title: string
+  description: string | null
+  date: string
+  end_date: string | null
+  type: 'holiday' | 'event' | 'pta_meeting' | 'exam' | 'field_trip'
+  audience: 'all' | 'staff' | 'parents' | 'class' | null
+  created_by: string | null
+  created_at: string
+}
+
+// ── Daily Activities ──
+
+export interface DailyLog {
+  id: string
+  school_id: string
+  student_id: string
+  date: string
+  logged_by: string | null
+}
+
+export interface LogEntry {
+  id: string
+  log_id: string
+  school_id: string
+  type: 'meal' | 'nap' | 'activity' | 'mood' | 'note'
+  value: string | null
+  time: string | null
+  photo_url: string | null
+  notes: string | null
+}
+
+export interface ActivityTemplate {
+  id: string
+  school_id: string
+  name: string
+  type: 'meal' | 'nap' | 'activity' | 'mood' | 'note'
+  default_options: Record<string, unknown> | null
+}
+
+// ── Curriculum ──
+
+export interface LessonPlan {
+  id: string
+  school_id: string
+  class_id: string
+  week_start: string
+  theme: string | null
+  created_by: string | null
+  created_at: string
+}
+
+export interface PlanActivity {
+  id: string
+  plan_id: string
+  school_id: string
+  day: 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat'
+  time_slot: string | null
+  activity_name: string
+  type: 'circle_time' | 'free_play' | 'art' | 'music' | 'outdoor' | 'story' | 'sensory' | null
+  description: string | null
+  materials_needed: string | null
+}
+
+export interface ActivityLibraryItem {
+  id: string
+  school_id: string
+  name: string
+  type: string | null
+  description: string | null
+  materials: string | null
+  age_group: string | null
+  duration_mins: number | null
+  is_default: boolean
+}
+
+// ── Health & Safety ──
+
+export interface MedicalRecord {
+  id: string
+  student_id: string
+  school_id: string
+  condition: string | null
+  medication: string | null
+  doctor_name: string | null
+  doctor_phone: string | null
+  notes: string | null
+}
+
+export interface Immunization {
+  id: string
+  student_id: string
+  school_id: string
+  vaccine_name: string
+  date_given: string | null
+  next_due_date: string | null
+}
+
+export interface Incident {
+  id: string
+  school_id: string
+  student_id: string
+  date: string
+  time: string | null
+  description: string
+  action_taken: string | null
+  severity: 'minor' | 'moderate' | 'serious'
+  reported_by: string | null
+  parent_notified: boolean
+  created_at: string
+}
+
+// ── Transport ──
+
+export interface Route {
+  id: string
+  school_id: string
+  name: string
+  driver_id: string | null
+  vehicle_number: string | null
+  capacity: number | null
+  status: 'active' | 'inactive'
+}
+
+export interface RouteStop {
+  id: string
+  route_id: string
+  school_id: string
+  stop_name: string
+  pickup_time: string | null
+  sequence_order: number | null
+}
+
+export interface StudentTransport {
+  id: string
+  student_id: string
+  school_id: string
+  route_id: string
+  stop_id: string | null
+  type: 'pickup' | 'drop' | 'both'
+}
+
+// ── Meals ──
+
+export interface MealPlan {
+  id: string
+  school_id: string
+  date: string
+  meal_type: 'breakfast' | 'lunch' | 'snack'
+  menu_items: string
+  notes: string | null
+}
+
+export interface MealTracking {
+  id: string
+  school_id: string
+  student_id: string
+  date: string
+  meal_type: 'breakfast' | 'lunch' | 'snack'
+  status: 'eaten' | 'skipped' | 'absent'
+  notes: string | null
+}
+
+// ── Multi-Branch ──
+
+export interface SchoolGroup {
+  id: string
+  name: string
+  owner_id: string
+}
+
+export interface SchoolGroupMember {
+  group_id: string
+  school_id: string
+}
+
 // Join types for common queries
 export interface StudentWithClass extends Student {
   class: Class | null
@@ -209,5 +453,36 @@ export interface InvoiceWithItems extends Invoice {
 }
 
 export interface AttendanceWithStudent extends Attendance {
+  student: Student
+}
+
+export interface StaffWithClass extends StaffProfile {
+  class: Class | null
+}
+
+export interface LeaveRequestWithStaff extends LeaveRequest {
+  staff: StaffProfile
+}
+
+export interface InquiryWithAssignee extends Inquiry {
+  assignee: Profile | null
+}
+
+export interface DailyLogWithEntries extends DailyLog {
+  entries: LogEntry[]
+  student: Student
+}
+
+export interface RouteWithDetails extends Route {
+  stops: RouteStop[]
+  driver: StaffProfile | null
+}
+
+export interface LessonPlanWithActivities extends LessonPlan {
+  activities: PlanActivity[]
+  class: Class | null
+}
+
+export interface IncidentWithStudent extends Incident {
   student: Student
 }

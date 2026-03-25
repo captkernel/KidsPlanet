@@ -1,6 +1,7 @@
 import {
   LayoutDashboard, Users, ClipboardCheck, GraduationCap, Briefcase,
   IndianRupee, MessageSquare, Calendar, Palette, Globe, BarChart3,
+  Activity, BookOpen, HeartPulse, Bus, UtensilsCrossed, Home,
 } from "lucide-react";
 
 export const SCHOOL = {
@@ -19,13 +20,19 @@ export const NAV_ITEMS = [
   { href: "/students", label: "Students", icon: Users, section: "academic", roles: ["admin", "staff"] },
   { href: "/attendance", label: "Attendance", icon: ClipboardCheck, section: "academic", roles: ["admin", "staff"] },
   { href: "/admissions", label: "Admissions", icon: GraduationCap, section: "academic", roles: ["admin"] },
+  { href: "/daily-activities", label: "Daily Activities", icon: Activity, section: "academic", roles: ["admin", "staff"] },
   { href: "/staff", label: "Staff", icon: Briefcase, section: "academic", roles: ["admin"] },
   { href: "/finance", label: "Finance", icon: IndianRupee, section: "admin", roles: ["admin", "accountant"] },
   { href: "/communication", label: "Communication", icon: MessageSquare, section: "admin", roles: ["admin", "staff"] },
   { href: "/calendar", label: "Calendar", icon: Calendar, section: "admin", roles: ["admin", "staff", "parent"] },
+  { href: "/curriculum", label: "Curriculum", icon: BookOpen, section: "admin", roles: ["admin", "staff"] },
+  { href: "/health", label: "Health", icon: HeartPulse, section: "admin", roles: ["admin", "staff"] },
+  { href: "/transport", label: "Transport", icon: Bus, section: "admin", roles: ["admin"] },
+  { href: "/meals", label: "Meals", icon: UtensilsCrossed, section: "admin", roles: ["admin", "staff"] },
   { href: "/content-studio", label: "Content Studio", icon: Palette, section: "tools", roles: ["admin"] },
   { href: "/website", label: "Website", icon: Globe, section: "tools", roles: ["admin"] },
   { href: "/reports", label: "Reports", icon: BarChart3, section: "tools", roles: ["admin", "accountant"] },
+  { href: "/parent", label: "Parent Portal", icon: Home, section: "main", roles: ["parent"] },
 ];
 
 export const SECTIONS: Record<string, string> = {
