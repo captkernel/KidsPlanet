@@ -1,6 +1,6 @@
 import {
-  LayoutDashboard, Users, ClipboardCheck, GraduationCap, UserCog,
-  DollarSign, Megaphone, Calendar, Palette, Globe, BarChart3, BookOpen
+  LayoutDashboard, Users, ClipboardCheck, GraduationCap, Briefcase,
+  IndianRupee, MessageSquare, Calendar, Palette, Globe, BarChart3,
 } from "lucide-react";
 
 export const SCHOOL = {
@@ -15,18 +15,18 @@ export const SCHOOL = {
 };
 
 export const NAV_ITEMS = [
-  { href: "/", label: "Dashboard", icon: LayoutDashboard, section: "main" },
-  { href: "/students", label: "Students", icon: Users, section: "academic" },
-  { href: "/attendance", label: "Attendance", icon: ClipboardCheck, section: "academic" },
-  { href: "/admissions", label: "Admissions", icon: GraduationCap, section: "academic" },
-  { href: "/staff", label: "Staff", icon: UserCog, section: "academic" },
-  { href: "/finance", label: "Finance", icon: DollarSign, section: "admin" },
-  { href: "/communication", label: "Communication", icon: Megaphone, section: "admin" },
-  { href: "/calendar", label: "Calendar", icon: Calendar, section: "admin" },
-  { href: "/content-studio", label: "Content Studio", icon: Palette, section: "tools" },
-  { href: "/website", label: "Website", icon: Globe, section: "tools" },
-  { href: "/reports", label: "Reports", icon: BarChart3, section: "tools" },
-] as const;
+  { href: "/", label: "Dashboard", icon: LayoutDashboard, section: "main", roles: ["admin", "staff", "parent", "accountant"] },
+  { href: "/students", label: "Students", icon: Users, section: "academic", roles: ["admin", "staff"] },
+  { href: "/attendance", label: "Attendance", icon: ClipboardCheck, section: "academic", roles: ["admin", "staff"] },
+  { href: "/admissions", label: "Admissions", icon: GraduationCap, section: "academic", roles: ["admin"] },
+  { href: "/staff", label: "Staff", icon: Briefcase, section: "academic", roles: ["admin"] },
+  { href: "/finance", label: "Finance", icon: IndianRupee, section: "admin", roles: ["admin", "accountant"] },
+  { href: "/communication", label: "Communication", icon: MessageSquare, section: "admin", roles: ["admin", "staff"] },
+  { href: "/calendar", label: "Calendar", icon: Calendar, section: "admin", roles: ["admin", "staff", "parent"] },
+  { href: "/content-studio", label: "Content Studio", icon: Palette, section: "tools", roles: ["admin"] },
+  { href: "/website", label: "Website", icon: Globe, section: "tools", roles: ["admin"] },
+  { href: "/reports", label: "Reports", icon: BarChart3, section: "tools", roles: ["admin", "accountant"] },
+];
 
 export const SECTIONS: Record<string, string> = {
   main: "",

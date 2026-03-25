@@ -22,11 +22,16 @@ export default function Sidebar() {
     ? profile.full_name.split(' ').map((n: string) => n[0]).join('').toUpperCase().slice(0, 2)
     : 'PS';
 
-  const grouped = NAV_ITEMS.reduce((acc, item) => {
+  const visibleItems = NAV_ITEMS.filter(item =>
+    item.roles.some(role => profile?.roles?.includes(role))
+  );
+
+  type NavItem = typeof NAV_ITEMS[number];
+  const grouped = visibleItems.reduce((acc, item) => {
     if (!acc[item.section]) acc[item.section] = [];
     acc[item.section].push(item);
     return acc;
-  }, {} as Record<string, typeof NAV_ITEMS[number][]>);
+  }, {} as Record<string, NavItem[]>);
 
   const nav = (
     <div className="flex flex-col h-full">

@@ -1,152 +1,169 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import StatCard from "@/components/StatCard";
-import { getStudentStats } from "@/data/students";
-import { getAdmissionStats } from "@/data/admissions";
-import { getFinanceStats } from "@/data/finance";
+import { useAuth } from "@/lib/hooks/useAuth";
+import { createClient } from "@/lib/supabase/client";
+import { formatCurrency } from "@/lib/utils/formatters";
+import { todayISO } from "@/lib/utils/formatters";
 import {
-  Users, GraduationCap, DollarSign, ClipboardCheck,
-  AlertCircle, TrendingUp, UserPlus, Clock
+  Users, ClipboardCheck, IndianRupee, AlertTriangle,
+  UserPlus, Palette, MessageSquare, BarChart3, Globe,
 } from "lucide-react";
-import Link from "next/link";
+
+interface DashboardStats {
+  totalStudents: number;
+  attendancePresent: number;
+  attendanceTotal: number;
+  attendanceMarked: boolean;
+  feeCollectedMonth: number;
+  feeOutstanding: number;
+}
 
 export default function DashboardPage() {
-  const studentStats = getStudentStats();
-  const admissionStats = getAdmissionStats();
-  const financeStats = getFinanceStats();
+  const { profile, school } = useAuth();
+  const [stats, setStats] = useState<DashboardStats>({
+    totalStudents: 0,
+    attendancePresent: 0,
+    attendanceTotal: 0,
+    attendanceMarked: false,
+    feeCollectedMonth: 0,
+    feeOutstanding: 0,
+  });
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (!profile?.school_id) return;
+
+    const fetchStats = async () => {
+      const supabase = createClient();
+      const schoolId = profile.school_id;
+      const today = todayISO();
+
+      // Current month boundaries
+      const monthStart = today.slice(0, 7) + "-01";
+      const nextMonth = new Date(today);
+      nextMonth.setMonth(nextMonth.getMonth() + 1);
+      nextMonth.setDate(1);
+      const monthEnd = nextMonth.toISOString().split("T")[0];
+
+      const [studentsRes, attendanceRes, invoicesRes, paymentsRes] = await Promise.all([
+        supabase
+          .from("students")
+          .select("id", { count: "exact", head: true })
+          .eq("school_id", schoolId)
+          .eq("status", "active"),
+        supabase
+          .from("attendance")
+          .select("status")
+          .eq("school_id", schoolId)
+          .eq("date", today),
+        supabase
+          .from("invoices")
+          .select("total_amount, status")
+          .eq("school_id", schoolId),
+        supabase
+          .from("payments")
+          .select("amount, paid_at")
+          .eq("school_id", schoolId)
+          .gte("paid_at", monthStart)
+          .lt("paid_at", monthEnd),
+      ]);
+
+      const totalStudents = studentsRes.count ?? 0;
+
+      const attendanceRows = attendanceRes.data ?? [];
+      const attendanceMarked = attendanceRows.length > 0;
+      const attendancePresent = attendanceRows.filter((r) => r.status === "present").length;
+      const attendanceTotal = attendanceRows.length;
+
+      const invoices = invoicesRes.data ?? [];
+      const feeOutstanding = invoices
+        .filter((inv) => inv.status === "pending" || inv.status === "overdue" || inv.status === "partial")
+        .reduce((sum, inv) => sum + (inv.total_amount ?? 0), 0);
+
+      const feeCollectedMonth = (paymentsRes.data ?? []).reduce(
+        (sum, p) => sum + (p.amount ?? 0),
+        0
+      );
+
+      setStats({
+        totalStudents,
+        attendancePresent,
+        attendanceTotal,
+        attendanceMarked,
+        feeCollectedMonth,
+        feeOutstanding,
+      });
+      setLoading(false);
+    };
+
+    fetchStats();
+  }, [profile?.school_id]);
+
+  const attendanceDisplay = stats.attendanceMarked
+    ? `${stats.attendancePresent}/${stats.attendanceTotal} present`
+    : "Not marked";
+
+  const quickActions = [
+    { label: "Add Student", href: "/students/new", icon: UserPlus, color: "text-primary" },
+    { label: "Mark Attendance", href: "/attendance", icon: ClipboardCheck, color: "text-accent-dark" },
+    { label: "Record Payment", href: "/finance", icon: IndianRupee, color: "text-success" },
+    { label: "Send Message", href: "/communication", icon: MessageSquare, color: "text-info" },
+    { label: "View Reports", href: "/reports", icon: BarChart3, color: "text-warning" },
+    { label: "Content Studio", href: "/content-studio", icon: Palette, color: "text-purple-600" },
+  ];
 
   return (
     <>
       <PageHeader
-        title="Welcome back, Mrs. Parmar"
-        subtitle="Here's what's happening at Kids Planet today"
+        title={`Welcome back, ${profile?.full_name ?? "…"}`}
+        subtitle={`Here's what's happening at ${school?.name ?? "your school"} today`}
       />
 
       {/* Key Metrics */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-        <StatCard label="Total Students" value={studentStats.total} icon={Users} color="primary" />
-        <StatCard label="New Inquiries" value={admissionStats.new} icon={UserPlus} color="accent" />
-        <StatCard label="Fee Collection" value={`₹${(financeStats.totalCollected / 1000).toFixed(0)}K`} icon={DollarSign} color="success" />
-        <StatCard label="Collection Rate" value={`${financeStats.collectionRate}%`} icon={TrendingUp} color="info" />
+        <StatCard
+          label="Total Students"
+          value={loading ? "—" : stats.totalStudents}
+          icon={Users}
+          color="primary"
+        />
+        <StatCard
+          label="Today's Attendance"
+          value={loading ? "—" : attendanceDisplay}
+          icon={ClipboardCheck}
+          color="info"
+        />
+        <StatCard
+          label="Fee Collection (Month)"
+          value={loading ? "—" : formatCurrency(stats.feeCollectedMonth)}
+          icon={IndianRupee}
+          color="success"
+        />
+        <StatCard
+          label="Outstanding Fees"
+          value={loading ? "—" : formatCurrency(stats.feeOutstanding)}
+          icon={AlertTriangle}
+          color="danger"
+        />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Admission Pipeline */}
-        <div className="card lg:col-span-2">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="font-bold text-primary-dark">Admission Pipeline</h2>
-            <Link href="/admissions" className="text-xs text-primary font-semibold hover:underline">View All →</Link>
-          </div>
-          <div className="grid grid-cols-4 gap-3 mb-4">
-            {[
-              { label: "New", count: admissionStats.new, color: "bg-blue-100 text-blue-700" },
-              { label: "Contacted", count: admissionStats.contacted, color: "bg-amber-100 text-amber-700" },
-              { label: "Visited", count: admissionStats.visited, color: "bg-purple-100 text-purple-700" },
-              { label: "Enrolled", count: admissionStats.enrolled, color: "bg-green-100 text-green-700" },
-            ].map((stage) => (
-              <div key={stage.label} className="text-center p-3 rounded-lg bg-surface-muted">
-                <div className="text-xl font-bold text-primary-dark">{stage.count}</div>
-                <div className={`badge mt-1 ${stage.color}`}>{stage.label}</div>
-              </div>
-            ))}
-          </div>
-          <div className="text-sm text-text-muted">
-            <strong>{admissionStats.filledSeats}</strong> of <strong>{admissionStats.totalSeats}</strong> seats filled across all classes
-            <div className="w-full h-2 bg-surface-muted rounded-full mt-2 overflow-hidden">
-              <div
-                className="h-full bg-primary rounded-full"
-                style={{ width: `${(admissionStats.filledSeats / admissionStats.totalSeats) * 100}%` }}
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Quick Actions */}
-        <div className="card">
-          <h2 className="font-bold text-primary-dark mb-4">Quick Actions</h2>
-          <div className="space-y-2">
-            {[
-              { label: "Mark Attendance", href: "/attendance", icon: ClipboardCheck, color: "text-primary" },
-              { label: "New Inquiry", href: "/admissions", icon: UserPlus, color: "text-accent-dark" },
-              { label: "Record Payment", href: "/finance", icon: DollarSign, color: "text-success" },
-              { label: "Create Announcement", href: "/communication", icon: AlertCircle, color: "text-info" },
-              { label: "Generate Flyer", href: "/content-studio", icon: GraduationCap, color: "text-purple-600" },
-            ].map((action) => (
-              <Link
-                key={action.label}
-                href={action.href}
-                className="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-muted transition-colors"
-              >
-                <action.icon size={18} className={action.color} />
-                <span className="text-sm font-medium text-text-light">{action.label}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Fee Overview & Class Distribution */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
-        <div className="card">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="font-bold text-primary-dark">Fee Overview (Q4)</h2>
-            <Link href="/finance" className="text-xs text-primary font-semibold hover:underline">Details →</Link>
-          </div>
-          <div className="space-y-3">
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-text-light">Total Due</span>
-              <span className="font-bold text-primary-dark">₹{financeStats.totalDue.toLocaleString()}</span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-text-light">Collected</span>
-              <span className="font-bold text-success">₹{financeStats.totalCollected.toLocaleString()}</span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-text-light">Outstanding</span>
-              <span className="font-bold text-danger">₹{financeStats.outstanding.toLocaleString()}</span>
-            </div>
-            <div className="pt-2 border-t flex gap-4">
-              <div className="badge bg-green-100 text-green-700">{financeStats.paid} Paid</div>
-              <div className="badge bg-amber-100 text-amber-700">{financeStats.partial} Partial</div>
-              <div className="badge bg-red-100 text-red-700">{financeStats.overdue} Overdue</div>
-            </div>
-          </div>
-        </div>
-
-        <div className="card">
-          <h2 className="font-bold text-primary-dark mb-4">Students by Class</h2>
-          <div className="space-y-2">
-            {Object.entries(studentStats.byClass)
-              .sort(([a], [b]) => a.localeCompare(b))
-              .map(([cls, count]) => (
-                <div key={cls} className="flex items-center gap-3">
-                  <span className="text-sm text-text-light w-24 truncate">{cls}</span>
-                  <div className="flex-1 h-5 bg-surface-muted rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-primary/60 rounded-full"
-                      style={{ width: `${(count / 5) * 100}%` }}
-                    />
-                  </div>
-                  <span className="text-sm font-semibold text-primary-dark w-8 text-right">{count}</span>
-                </div>
-              ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Recent Activity */}
-      <div className="card mt-6">
-        <h2 className="font-bold text-primary-dark mb-4">Today&apos;s Reminders</h2>
-        <div className="space-y-3">
-          {[
-            { icon: Clock, text: "Follow up with Rakesh Kumar (Nursery inquiry) — visit scheduled March 25", color: "text-warning" },
-            { icon: AlertCircle, text: "2 fee payments overdue — Karan Singh (KG), Saanvi Pathak (Class 6)", color: "text-danger" },
-            { icon: UserPlus, text: "3 new admission inquiries need response", color: "text-info" },
-            { icon: GraduationCap, text: "Annual function news coverage in Amar Ujala — share on social media", color: "text-success" },
-          ].map((item, i) => (
-            <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-surface-cream">
-              <item.icon size={16} className={`mt-0.5 ${item.color}`} />
-              <span className="text-sm text-text-light">{item.text}</span>
-            </div>
+      {/* Quick Actions */}
+      <div className="card">
+        <h2 className="font-bold text-primary-dark mb-4">Quick Actions</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          {quickActions.map((action) => (
+            <Link
+              key={action.label}
+              href={action.href}
+              className="flex flex-col items-center gap-2 p-4 rounded-xl bg-surface-muted hover:bg-surface-cream transition-colors text-center"
+            >
+              <action.icon size={24} className={action.color} />
+              <span className="text-xs font-medium text-text-light leading-tight">{action.label}</span>
+            </Link>
           ))}
         </div>
       </div>
