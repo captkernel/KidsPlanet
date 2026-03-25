@@ -372,6 +372,7 @@ export const TEMPLATES: TemplateDefinition[] = [
 ];
 
 export function getTemplate(id: string): TemplateDefinition | undefined {
+  if (id === 'blank') return undefined;
   return TEMPLATES.find((t) => t.id === id);
 }
 

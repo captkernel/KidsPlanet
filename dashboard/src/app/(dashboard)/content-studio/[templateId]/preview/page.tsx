@@ -46,6 +46,19 @@ function PreviewContent({ templateId }: { templateId: string }) {
 
   const TemplateComponent = getTemplateComponent(templateId);
 
+  if (!TemplateComponent) {
+    return (
+      <div className="min-h-screen bg-gray-700 flex items-center justify-center text-white">
+        <div className="text-center">
+          <h2 className="text-xl font-bold mb-2">Preview not available for blank canvas</h2>
+          <Link href="/content-studio" className="underline">
+            Back to Gallery
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   const handleDownload = async () => {
     if (!previewRef.current) return;
     try {

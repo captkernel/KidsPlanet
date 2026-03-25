@@ -77,7 +77,8 @@ const registry: Record<string, ComponentType<TemplateProps>> = {
   "banner-website-hero": WebsiteHeroBanner,
 };
 
-export function getTemplateComponent(templateId: string): ComponentType<TemplateProps> {
+export function getTemplateComponent(templateId: string): ComponentType<TemplateProps> | null {
+  if (templateId === 'blank') return null;
   return registry[templateId] || PlaceholderTemplate;
 }
 

@@ -28,7 +28,7 @@ const TemplateRenderer = forwardRef<TemplateRendererHandle, TemplateRendererProp
     return (
       <div style={containerStyle}>
         <div ref={containerRef} style={innerStyle}>
-          <TemplateComponent fields={fields} />
+          {TemplateComponent ? <TemplateComponent fields={fields} /> : null}
         </div>
       </div>
     );
