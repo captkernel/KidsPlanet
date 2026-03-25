@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { Plus } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import {
   TEMPLATES,
@@ -9,11 +11,23 @@ import {
   CATEGORY_COLORS,
   type TemplateCategory,
 } from "@/data/templates";
+import { Modal } from "@/components/shared/Modal";
 
 const CATEGORIES = Object.keys(CATEGORY_LABELS) as TemplateCategory[];
 
+const SIZE_PRESETS = [
+  { label: "Instagram Post", width: 1080, height: 1080 },
+  { label: "Instagram Story", width: 1080, height: 1920 },
+  { label: "A4 Print", width: 794, height: 1123 },
+  { label: "Facebook Cover", width: 1200, height: 628 },
+];
+
 export default function ContentStudioPage() {
+  const router = useRouter();
   const [filter, setFilter] = useState<TemplateCategory | "all">("all");
+  const [showSizeModal, setShowSizeModal] = useState(false);
+  const [customWidth, setCustomWidth] = useState("1080");
+  const [customHeight, setCustomHeight] = useState("1080");
 
   const filtered =
     filter === "all"
@@ -24,6 +38,18 @@ export default function ContentStudioPage() {
   for (const cat of CATEGORIES) {
     counts[cat] = TEMPLATES.filter((t) => t.category === cat).length;
   }
+
+  const handlePresetSelect = (width: number, height: number) => {
+    setShowSizeModal(false);
+    router.push(`/content-studio/blank?w=${width}&h=${height}`);
+  };
+
+  const handleCustomSelect = () => {
+    const w = Math.max(1, parseInt(customWidth, 10) || 1080);
+    const h = Math.max(1, parseInt(customHeight, 10) || 1080);
+    setShowSizeModal(false);
+    router.push(`/content-studio/blank?w=${w}&h=${h}`);
+  };
 
   return (
     <>
@@ -61,6 +87,23 @@ export default function ContentStudioPage() {
 
       {/* Template grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        {/* Blank Canvas card — always first */}
+        <button
+          onClick={() => setShowSizeModal(true)}
+          className="card border-2 border-dashed border-gray-300 rounded-2xl hover:border-primary hover:shadow-md transition-all group text-left"
+        >
+          <div className="aspect-[4/3] rounded-lg flex flex-col items-center justify-center mb-4 text-gray-400 group-hover:text-primary transition-colors">
+            <Plus size={32} strokeWidth={1.5} />
+          </div>
+          <div className="flex items-start justify-between mb-2">
+            <div className="flex-1 min-w-0">
+              <h3 className="font-bold text-sm text-primary-dark">Blank Canvas</h3>
+              <p className="text-xs text-text-muted mt-1">Start from scratch</p>
+            </div>
+          </div>
+          <div className="text-xs text-text-muted mt-2">Custom size &middot; All tools</div>
+        </button>
+
         {filtered.map((template) => (
           <Link
             key={template.id}
@@ -113,6 +156,72 @@ export default function ContentStudioPage() {
           No templates found in this category.
         </div>
       )}
+
+      {/* Size selection modal */}
+      <Modal
+        open={showSizeModal}
+        onClose={() => setShowSizeModal(false)}
+        title="Choose Canvas Size"
+        size="md"
+      >
+        <div className="space-y-3">
+          <p className="text-sm text-text-muted mb-4">
+            Select a preset size or enter custom dimensions.
+          </p>
+
+          {/* Presets */}
+          <div className="grid grid-cols-2 gap-3">
+            {SIZE_PRESETS.map((preset) => (
+              <button
+                key={preset.label}
+                onClick={() => handlePresetSelect(preset.width, preset.height)}
+                className="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-surface-muted hover:border-primary hover:bg-primary/5 transition-all group"
+              >
+                <span className="font-semibold text-sm text-primary-dark group-hover:text-primary">
+                  {preset.label}
+                </span>
+                <span className="text-xs text-text-muted mt-1">
+                  {preset.width} &times; {preset.height}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          {/* Custom size */}
+          <div className="border-t border-surface-muted pt-4 mt-4">
+            <p className="text-sm font-medium text-primary-dark mb-3">Custom Size</p>
+            <div className="flex items-center gap-3">
+              <div className="flex-1">
+                <label className="block text-xs text-text-muted mb-1">Width (px)</label>
+                <input
+                  type="number"
+                  value={customWidth}
+                  onChange={(e) => setCustomWidth(e.target.value)}
+                  min={1}
+                  className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
+                />
+              </div>
+              <span className="text-text-muted mt-5">&times;</span>
+              <div className="flex-1">
+                <label className="block text-xs text-text-muted mb-1">Height (px)</label>
+                <input
+                  type="number"
+                  value={customHeight}
+                  onChange={(e) => setCustomHeight(e.target.value)}
+                  min={1}
+                  className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
+                />
+              </div>
+              <button
+                onClick={handleCustomSelect}
+                className="btn-primary mt-5 whitespace-nowrap"
+              >
+                Create
+              </button>
+            </div>
+          </div>
+        </div>
+      </Modal>
     </>
   );
 }
