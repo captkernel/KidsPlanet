@@ -43,7 +43,7 @@ export function DataTable<T extends Record<string, unknown>>({
       <div className="card">
         <div className="space-y-3">
           {[1, 2, 3, 4, 5].map((i) => (
-            <div key={i} className="h-12 bg-surface-muted rounded-lg animate-pulse" />
+            <div key={i} className="skeleton h-12" />
           ))}
         </div>
       </div>

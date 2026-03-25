@@ -33,7 +33,7 @@ export function FormField({
 
   return (
     <div>
-      <label htmlFor={name} className="label">
+      <label htmlFor={name} className="label mb-1.5">
         {label}
         {required && <span className="text-danger ml-1">*</span>}
       </label>
