@@ -58,4 +58,5 @@ export const FOOTER_LINKS = [
   { href: "/announcements", label: "Announcements" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
+  { href: "/PlanetStudio", label: "Planet Studio" },
 ] as const;
