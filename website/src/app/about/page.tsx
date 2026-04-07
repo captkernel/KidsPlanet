@@ -10,7 +10,8 @@ import Timeline from "@/components/Timeline";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Kids Planet is Kullu Valley's dedicated early childhood learning center. Founded in 2010 by Mrs. Neeta Parmar, we specialize in nurturing young learners from Playgroup to Class 8.",
+    "Kids Planet is Kullu Valley's dedicated learning center. Founded in 2010 by Mrs. Neeta Parmar, nurturing young learners from Playgroup to Class 8 with personal attention.",
+  keywords: ["about Kids Planet", "school history Kullu", "Mrs Neeta Parmar", "Kullu Valley school", "HPBOSE school Kullu"],
 };
 
 const facilities = [

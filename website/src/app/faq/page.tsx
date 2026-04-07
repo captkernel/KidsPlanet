@@ -7,11 +7,31 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "FAQ",
   description: `Frequently asked questions about ${SCHOOL.name}, Kullu — admissions, fees, academics, school life, and more.`,
+  keywords: ["Kids Planet FAQ", "school fees Kullu", "admission questions", "school timings Kullu", "Kids Planet reviews"],
 };
+
+function getFaqJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}
 
 export default function FAQPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqJsonLd()) }}
+      />
       <section className="section-padding bg-surface-cream">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-primary-dark">

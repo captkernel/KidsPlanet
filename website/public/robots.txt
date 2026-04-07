@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /PlanetStudio/
 
 Sitemap: https://kidsplanetkullu.com/sitemap.xml

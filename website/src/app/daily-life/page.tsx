@@ -8,8 +8,9 @@ import { Shield, Utensils, Bus, Shirt } from "lucide-react";
 import scheduleData from "@/content/daily-schedule.json";
 
 export const metadata: Metadata = {
-  title: "A Day at Kids Planet",
+  title: "School Life",
   description: `See what a typical day looks like at ${SCHOOL.name}, Kullu. Daily schedules for pre-school, primary, and middle school.`,
+  keywords: ["Kids Planet daily routine", "school timings Kullu", "school schedule", "school life Kullu", "Kids Planet activities"],
 };
 
 const highlights = [

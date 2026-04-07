@@ -7,8 +7,9 @@ import { SCHOOL } from "@/lib/constants";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Us",
   description: `Contact ${SCHOOL.name}, Kullu. Phone: ${SCHOOL.phoneDisplay}. Address: ${SCHOOL.address}.`,
+  keywords: ["Kids Planet contact", "school phone Kullu", "Kids Planet address", "Dhalpur school Kullu", "school inquiry Kullu"],
 };
 
 export default function ContactPage() {

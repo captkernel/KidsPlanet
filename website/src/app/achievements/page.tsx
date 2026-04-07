@@ -9,6 +9,7 @@ import achievements from "@/content/achievements.json";
 export const metadata: Metadata = {
   title: "Achievements",
   description: `Awards, results, and achievements of students at ${SCHOOL.name}, Kullu. Academic excellence and cultural milestones.`,
+  keywords: ["Kids Planet achievements", "school results Kullu", "student awards Kullu", "HPBOSE results", "school sports Kullu"],
 };
 
 export default function AchievementsPage() {

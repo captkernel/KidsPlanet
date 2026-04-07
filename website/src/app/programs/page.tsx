@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   title: "Programs",
   description:
     "Explore Kids Planet's academic programs from Playgroup to Class 8 — play-based pre-school, HPBOSE-aligned primary, and middle school in Kullu.",
+  keywords: ["Kullu school programs", "playgroup Kullu", "nursery Kullu", "LKG UKG Kullu", "HPBOSE primary school", "Class 1-8 Kullu"],
 };
 
 const sections = [

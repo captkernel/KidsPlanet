@@ -6,6 +6,7 @@ import gallery from "@/content/gallery.json";
 export const metadata: Metadata = {
   title: "Gallery",
   description: `Photo gallery of ${SCHOOL.name} — classrooms, events, activities, and campus life in Kullu.`,
+  keywords: ["Kids Planet photos", "school gallery Kullu", "school events Kullu", "Kids Planet campus", "school activities photos"],
 };
 
 export default function GalleryPage() {

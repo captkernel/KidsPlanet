@@ -49,3 +49,31 @@ export function getSchoolJsonLd() {
     sameAs: [SCHOOL.social.facebook],
   };
 }
+
+export function getBreadcrumbJsonLd() {
+  const baseUrl = "https://kidsplanetkullu.com";
+  const pages = [
+    { name: "Home", path: "" },
+    { name: "About Us", path: "/about" },
+    { name: "Programs", path: "/programs" },
+    { name: "Admissions", path: "/admissions" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Faculty", path: "/faculty" },
+    { name: "Achievements", path: "/achievements" },
+    { name: "School Life", path: "/daily-life" },
+    { name: "Announcements", path: "/announcements" },
+    { name: "FAQ", path: "/faq" },
+    { name: "Contact", path: "/contact" },
+  ];
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: pages.map((page, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: page.name,
+      item: `${baseUrl}${page.path}`,
+    })),
+  };
+}

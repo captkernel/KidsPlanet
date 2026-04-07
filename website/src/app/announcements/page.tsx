@@ -5,7 +5,8 @@ import announcements from "@/content/announcements.json";
 
 export const metadata: Metadata = {
   title: "Announcements",
-  description: `Latest news, notices, and updates from ${SCHOOL.name}, Kullu.`,
+  description: `Latest news, notices, and updates from ${SCHOOL.name}, Kullu. Stay informed about events, holidays, and school activities.`,
+  keywords: ["Kids Planet news", "school announcements Kullu", "school notices", "Kids Planet events", "school updates Kullu"],
 };
 
 export default function AnnouncementsPage() {

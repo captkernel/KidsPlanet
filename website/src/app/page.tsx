@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import FadeIn from "@/components/FadeIn";
+
+export const metadata: Metadata = {
+  title: "Kids Planet \u2014 Where Your Child's Brightest Future Begins",
+  description:
+    "Kids Planet is the leading school in Kullu, HP, offering Playgroup to Class 8 with personal attention, experienced faculty, and HPBOSE curriculum.",
+  keywords: ["Kids Planet Kullu", "best school in Kullu", "Kullu Valley school", "playgroup Kullu", "HPBOSE school Himachal Pradesh"],
+};
 import SectionHeading from "@/components/SectionHeading";
 import FounderSpotlight from "@/components/FounderSpotlight";
 import ProgramCard from "@/components/ProgramCard";

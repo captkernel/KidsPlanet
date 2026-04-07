@@ -10,8 +10,9 @@ import { SCHOOL } from "@/lib/constants";
 import allFaqs from "@/content/faq.json";
 
 export const metadata: Metadata = {
-  title: "Admissions",
+  title: "Admissions Open 2026-27",
   description: `Apply for admission at ${SCHOOL.name}, Kullu. ${SCHOOL.classes}, HP State Board. Limited seats — contact ${SCHOOL.phoneDisplay}.`,
+  keywords: ["Kids Planet admission", "school admission Kullu 2026", "Kullu school fees", "admission form Kullu", "playgroup admission"],
 };
 
 const admissionFaqs = allFaqs.filter((f) => f.category === "admissions");

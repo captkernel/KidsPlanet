@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import { SCHOOL } from "@/lib/constants";
-import { getSchoolJsonLd } from "@/lib/metadata";
+import { getSchoolJsonLd, getBreadcrumbJsonLd } from "@/lib/metadata";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
@@ -16,6 +16,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kidsplanetkullu.com"),
   title: {
     default: `${SCHOOL.name} — ${SCHOOL.tagline}`,
     template: `%s | ${SCHOOL.name}`,
@@ -38,6 +39,16 @@ export const metadata: Metadata = {
     siteName: SCHOOL.name,
     title: `${SCHOOL.name} — ${SCHOOL.tagline}`,
     description: SCHOOL.description,
+    url: "https://kidsplanetkullu.com",
+    locale: "en_IN",
+    images: [
+      {
+        url: "/logo.svg",
+        width: 512,
+        height: 512,
+        alt: `${SCHOOL.name} logo`,
+      },
+    ],
   },
 };
 
@@ -52,6 +63,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(getSchoolJsonLd()) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(getBreadcrumbJsonLd()) }}
         />
         <Header />
         <main className="min-h-screen pb-16 lg:pb-0">{children}</main>

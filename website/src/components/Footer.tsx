@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo-icon.svg" alt="" className="h-10 w-10" />
+              <img src="/logo-icon.svg" alt="Kids Planet logo" className="h-10 w-10" />
               <div>
                 <div className="text-lg font-bold leading-tight">{SCHOOL.name}</div>
                 <div className="text-sm text-white/70 leading-tight">

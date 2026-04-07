@@ -9,6 +9,7 @@ import faculty from "@/content/faculty.json";
 export const metadata: Metadata = {
   title: "Our Faculty",
   description: `Meet the dedicated teachers at ${SCHOOL.name}, Kullu. Led by ${SCHOOL.founder} with ${faculty.length} experienced educators.`,
+  keywords: ["Kids Planet teachers", "school faculty Kullu", "Neeta Parmar principal", "Kullu school staff", "teaching jobs Kullu"],
 };
 
 export default function FacultyPage() {

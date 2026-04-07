@@ -17,7 +17,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo-icon.svg" alt="" className="h-10 w-10" />
+            <img src="/logo-icon.svg" alt="Kids Planet logo" className="h-10 w-10" />
             <div>
               <div className="text-lg font-extrabold text-primary-dark leading-none tracking-tight">
                 Kids Planet
