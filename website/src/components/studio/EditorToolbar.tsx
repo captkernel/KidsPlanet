@@ -31,6 +31,7 @@ interface EditorToolbarProps {
   canvasMode: boolean;
   onToggleMode: () => void;
   onAddImage: () => void;
+  onOpenMediaPicker: () => void;
   onAddText: () => void;
   onOpenIconPicker: () => void;
   onOpenStickerPicker: () => void;
@@ -54,6 +55,7 @@ export default function EditorToolbar({
   canvasMode,
   onToggleMode,
   onAddImage,
+  onOpenMediaPicker,
   onAddText,
   onOpenIconPicker,
   onOpenStickerPicker,
@@ -121,6 +123,7 @@ export default function EditorToolbar({
         {canvasMode && (
           <AddMenu
             onAddImage={onAddImage}
+            onOpenMediaPicker={onOpenMediaPicker}
             onAddText={onAddText}
             onOpenIconPicker={onOpenIconPicker}
             onOpenStickerPicker={onOpenStickerPicker}

@@ -15,6 +15,7 @@ import { FloatingToolbar } from "@/components/studio/FloatingToolbar";
 import { LayerPanel } from "@/components/studio/LayerPanel";
 import { IconPicker } from "@/components/studio/IconPicker";
 import { StickerPicker } from "@/components/studio/StickerPicker";
+import MediaPicker from "@/components/studio/MediaPicker";
 import { useImageImporter } from "@/components/studio/ImageImporter";
 import { STICKERS } from "@/data/stickers";
 import type {
@@ -61,6 +62,7 @@ export default function CustomizePage({
   const [showLayers, setShowLayers] = useState(false);
   const [showIconPicker, setShowIconPicker] = useState(false);
   const [showStickerPicker, setShowStickerPicker] = useState(false);
+  const [showMediaPicker, setShowMediaPicker] = useState(false);
 
   const getDefaults = useCallback(() => {
     if (!template) return {};
@@ -223,6 +225,33 @@ export default function CustomizePage({
         y: (templateHeight - 80) / 2,
         width: 80,
         height: 80,
+        zIndex: elements.length + 1,
+        locked: false,
+        visible: true,
+        style: { opacity: 1 },
+      };
+      const newElems = [...elements, el];
+      setElements(newElems);
+      setSelectedElementId(el.id);
+      setCanvasMode(true);
+      pushHistory(fieldValues, newElems);
+    },
+    [elements, templateWidth, templateHeight, fieldValues, pushHistory]
+  );
+
+  const addMediaImage = useCallback(
+    (src: string) => {
+      const maxW = templateWidth * 0.5;
+      const maxH = templateHeight * 0.5;
+      const size = Math.min(maxW, maxH);
+      const el: ImageElement = {
+        id: crypto.randomUUID(),
+        type: "image",
+        content: src,
+        x: (templateWidth - size) / 2,
+        y: (templateHeight - size) / 2,
+        width: size,
+        height: size,
         zIndex: elements.length + 1,
         locked: false,
         visible: true,
@@ -645,6 +674,7 @@ export default function CustomizePage({
             canvasMode={canvasMode}
             onToggleMode={() => setCanvasMode((prev) => !prev)}
             onAddImage={importFromFile}
+            onOpenMediaPicker={() => setShowMediaPicker(true)}
             onAddText={addTextElement}
             onOpenIconPicker={() => setShowIconPicker(true)}
             onOpenStickerPicker={() => setShowStickerPicker(true)}
@@ -745,6 +775,14 @@ export default function CustomizePage({
         />
       )}
 
+      <MediaPicker
+        open={showMediaPicker}
+        onClose={() => setShowMediaPicker(false)}
+        onSelect={(src) => {
+          addMediaImage(src);
+          setShowMediaPicker(false);
+        }}
+      />
       <IconPicker
         open={showIconPicker}
         onClose={() => setShowIconPicker(false)}

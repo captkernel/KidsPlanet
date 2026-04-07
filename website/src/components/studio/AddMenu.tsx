@@ -1,16 +1,17 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { Plus, ImagePlus, Type, Sparkles, Sticker } from 'lucide-react'
+import { Plus, ImagePlus, Images, Type, Sparkles, Sticker } from 'lucide-react'
 
 interface AddMenuProps {
   onAddImage: () => void
+  onOpenMediaPicker: () => void
   onAddText: () => void
   onOpenIconPicker: () => void
   onOpenStickerPicker: () => void
 }
 
-export function AddMenu({ onAddImage, onAddText, onOpenIconPicker, onOpenStickerPicker }: AddMenuProps) {
+export function AddMenu({ onAddImage, onOpenMediaPicker, onAddText, onOpenIconPicker, onOpenStickerPicker }: AddMenuProps) {
   const [open, setOpen] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
 
@@ -43,11 +44,18 @@ export function AddMenu({ onAddImage, onAddText, onOpenIconPicker, onOpenSticker
       {open && (
         <div className="absolute top-full mt-1 bg-white rounded-xl shadow-lg border border-gray-200 py-1 w-48 z-50">
           <button
+            onClick={() => handle(onOpenMediaPicker)}
+            className="px-3 py-2.5 flex items-center gap-3 hover:bg-gray-50 cursor-pointer text-sm w-full text-left"
+          >
+            <Images size={16} className="text-text-muted" />
+            School Photos
+          </button>
+          <button
             onClick={() => handle(onAddImage)}
             className="px-3 py-2.5 flex items-center gap-3 hover:bg-gray-50 cursor-pointer text-sm w-full text-left"
           >
             <ImagePlus size={16} className="text-text-muted" />
-            Image
+            Upload Image
           </button>
           <button
             onClick={() => handle(onAddText)}
