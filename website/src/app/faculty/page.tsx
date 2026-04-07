@@ -79,7 +79,7 @@ export default function FacultyPage() {
         <div className="max-w-2xl mx-auto">
           <p className="text-sm text-text-muted">
             Interested in joining our team? We are always looking for passionate
-            educators. Contact us at <strong>+91 98180 97475</strong> for current openings.
+            educators. Contact us at <strong>+91 94180 23454</strong> for current openings.
           </p>
         </div>
       </section>

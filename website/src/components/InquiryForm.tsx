@@ -53,7 +53,7 @@ export function InquiryForm() {
         <AlertCircle size={48} className="text-red-500 mx-auto mb-4" />
         <h3 className="text-xl font-bold text-primary-dark">Submission Failed</h3>
         <p className="text-text-muted mt-2">
-          Please call us at +91 98180 97475 or message us on WhatsApp.
+          Please call us at +91 94180 23454 or message us on WhatsApp.
         </p>
         <button
           onClick={() => setError(false)}

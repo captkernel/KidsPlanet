@@ -57,7 +57,7 @@ export function SeatCounter() {
         })}
       </div>
       <p className="text-xs text-text-muted text-center mt-4">
-        Seat data is indicative. Call <strong>+91 98180 97475</strong> for exact availability.
+        Seat data is indicative. Call <strong>+91 94180 23454</strong> for exact availability.
       </p>
     </div>
   );

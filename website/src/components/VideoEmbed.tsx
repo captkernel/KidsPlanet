@@ -18,7 +18,7 @@ export function VideoEmbed({ videoId, title }: { videoId?: string; title?: strin
               <Play size={28} className="text-white ml-1" />
             </div>
             <p className="text-lg font-semibold">Virtual Tour Coming Soon</p>
-            <p className="text-sm text-white/70 mt-1">Visit us in person — call +91 98180 97475 to schedule a tour</p>
+            <p className="text-sm text-white/70 mt-1">Visit us in person — call +91 94180 23454 to schedule a tour</p>
           </div>
         </div>
       </div>

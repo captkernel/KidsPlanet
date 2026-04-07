@@ -9,10 +9,10 @@ export const SCHOOL = {
   founderBio:
     "With decades of teaching experience, Mrs. Neeta Parmar founded Kids Planet in 2010 with a vision to provide quality education in the heart of Kullu Valley. Her dedication to nurturing young minds has made Kids Planet the most trusted school in the region. Together with Mr. Ranjeet Parmar, the school has grown from a small playgroup into a full K–8 institution serving over 200 families.",
   address: "Kids Planet School, Guru Behar, Dhalpur, Kullu — 175101",
-  phone: "+919818097475",
-  phoneDisplay: "+91 98180 97475",
+  phone: "+919418023454",
+  phoneDisplay: "+91 94180 23454",
   email: "parmar.ranjeet95@gmail.com",
-  whatsapp: "919818097475",
+  whatsapp: "919418023454",
   board: "HP State Board (HPBOSE)",
   classes: "Playgroup – Class 8",
   ageRange: "Ages 2–14",

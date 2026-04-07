@@ -49,7 +49,7 @@ export const TEMPLATES: TemplateDefinition[] = [
       { key: "headline", label: "Headline", type: "text", default: "Admissions Open 2026-27" },
       { key: "subheadline", label: "Subheadline", type: "text", default: "Kullu Valley's Dedicated Early Childhood Learning Center" },
       { key: "cta", label: "Call to Action", type: "text", default: "Enroll Now — Limited Seats!" },
-      { key: "phone", label: "Contact Number", type: "text", default: "+91 98180 97475" },
+      { key: "phone", label: "Contact Number", type: "text", default: "+91 94180 23454" },
       { key: "classes", label: "Classes Offered", type: "text", default: "Playgroup · Nursery · LKG · UKG · Class 1–8" },
       { key: "backgroundImage", label: "Background Image", type: "image", default: "/images/campus/morning-assembly.jpg" },
     ],
@@ -81,7 +81,7 @@ export const TEMPLATES: TemplateDefinition[] = [
       { key: "dates", label: "Camp Dates", type: "text", default: "May 15 – June 15, 2026" },
       { key: "activities", label: "Activities", type: "text", default: "Art · Dance · Sports · Science Fun · Storytelling" },
       { key: "age", label: "Age Group", type: "text", default: "Ages 3–12 Years" },
-      { key: "phone", label: "Contact", type: "text", default: "+91 98180 97475" },
+      { key: "phone", label: "Contact", type: "text", default: "+91 94180 23454" },
     ],
   },
   {
@@ -96,7 +96,7 @@ export const TEMPLATES: TemplateDefinition[] = [
       { key: "date", label: "Date", type: "text", default: "April 5, 2026" },
       { key: "time", label: "Time", type: "text", default: "9:00 AM – 1:00 PM" },
       { key: "cta", label: "Call to Action", type: "text", default: "Come See Where Learning Comes Alive" },
-      { key: "phone", label: "Contact", type: "text", default: "+91 98180 97475" },
+      { key: "phone", label: "Contact", type: "text", default: "+91 94180 23454" },
     ],
   },
   // --- Brochures (A4: 794x1123px, single panel) ---
@@ -111,7 +111,7 @@ export const TEMPLATES: TemplateDefinition[] = [
       { key: "headline", label: "Headline", type: "text", default: "Welcome to Kids Planet" },
       { key: "tagline", label: "Tagline", type: "text", default: "Where Every Child Shines" },
       { key: "usps", label: "Key USPs", type: "textarea", default: "• Kullu's Only Dedicated Preschool\n• 20:1 Student-Teacher Ratio\n• Holistic Development Focus\n• Safe, Loving Environment" },
-      { key: "phone", label: "Contact", type: "text", default: "+91 98180 97475" },
+      { key: "phone", label: "Contact", type: "text", default: "+91 94180 23454" },
       { key: "headerImage", label: "Header Image", type: "image", default: "/images/campus/building-exterior.jpg" },
     ],
   },
@@ -126,7 +126,7 @@ export const TEMPLATES: TemplateDefinition[] = [
       { key: "headline", label: "Headline", type: "text", default: "Fee Structure 2026-27" },
       { key: "year", label: "Academic Year", type: "text", default: "2026-27" },
       { key: "note", label: "Additional Note", type: "text", default: "Fees payable quarterly. Sibling discount available." },
-      { key: "phone", label: "Contact", type: "text", default: "+91 98180 97475" },
+      { key: "phone", label: "Contact", type: "text", default: "+91 94180 23454" },
     ],
   },
   // --- Instagram Posts (1080x1080px) ---
@@ -140,7 +140,7 @@ export const TEMPLATES: TemplateDefinition[] = [
     fields: [
       { key: "headline", label: "Headline", type: "text", default: "Admissions Open 2026-27" },
       { key: "subheadline", label: "Subheadline", type: "text", default: "Playgroup to Class 8" },
-      { key: "cta", label: "Call to Action", type: "text", default: "Call Now: +91 98180 97475" },
+      { key: "cta", label: "Call to Action", type: "text", default: "Call Now: +91 94180 23454" },
       { key: "backgroundImage", label: "Background Image", type: "image", default: "/images/campus/building-exterior.jpg" },
     ],
   },
@@ -185,7 +185,7 @@ export const TEMPLATES: TemplateDefinition[] = [
       { key: "headline", label: "Headline", type: "text", default: "Limited Seats Available!" },
       { key: "subheadline", label: "Subheadline", type: "text", default: "89% Seats Already Filled" },
       { key: "cta", label: "Call to Action", type: "text", default: "Don't Wait — Enroll Today!" },
-      { key: "phone", label: "Contact", type: "text", default: "+91 98180 97475" },
+      { key: "phone", label: "Contact", type: "text", default: "+91 94180 23454" },
     ],
   },
   {
@@ -240,7 +240,7 @@ export const TEMPLATES: TemplateDefinition[] = [
       { key: "headline", label: "Headline", type: "text", default: "Admissions Open!" },
       { key: "year", label: "Academic Year", type: "text", default: "2026-27" },
       { key: "cta", label: "Swipe Up CTA", type: "text", default: "Swipe Up to Enquire" },
-      { key: "phone", label: "Contact", type: "text", default: "+91 98180 97475" },
+      { key: "phone", label: "Contact", type: "text", default: "+91 94180 23454" },
     ],
   },
   {
@@ -294,7 +294,7 @@ export const TEMPLATES: TemplateDefinition[] = [
       { key: "headline", label: "Headline", type: "text", default: "Thank You for Your Interest!" },
       { key: "message", label: "Message", type: "textarea", default: "We'd love to welcome your child to the Kids Planet family. Visit us to learn more!" },
       { key: "visitHours", label: "Visit Hours", type: "text", default: "Mon–Sat: 9 AM – 1 PM" },
-      { key: "phone", label: "Contact", type: "text", default: "+91 98180 97475" },
+      { key: "phone", label: "Contact", type: "text", default: "+91 94180 23454" },
     ],
   },
   {
@@ -309,7 +309,7 @@ export const TEMPLATES: TemplateDefinition[] = [
       { key: "quarter", label: "Quarter", type: "text", default: "Q1 (April – June 2026)" },
       { key: "dueDate", label: "Due Date", type: "text", default: "April 15, 2026" },
       { key: "note", label: "Note", type: "text", default: "Pay via UPI, Cash, or Bank Transfer" },
-      { key: "phone", label: "Contact", type: "text", default: "+91 98180 97475" },
+      { key: "phone", label: "Contact", type: "text", default: "+91 94180 23454" },
     ],
   },
   {
