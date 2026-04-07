@@ -83,7 +83,7 @@ function LoginPage({ onSuccess }: { onSuccess: () => void }) {
           </div>
 
           {error && (
-            <p className="text-sm text-red-600 font-medium">{error}</p>
+            <p className="text-sm text-error font-medium">{error}</p>
           )}
 
           <button

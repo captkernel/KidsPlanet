@@ -220,7 +220,7 @@ export function FloatingToolbar({
       <button
         title="Delete"
         onClick={onDelete}
-        className={`${btnClass} hover:bg-red-50 hover:text-red-600`}
+        className={`${btnClass} hover:bg-error/10 hover:text-error`}
       >
         <Trash2 size={14} />
       </button>

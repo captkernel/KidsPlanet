@@ -29,14 +29,14 @@ export function SeatCounter() {
           return (
             <div
               key={seat.className}
-              className={`card-static !p-4 ${isLow ? "ring-1 ring-red-200 bg-red-50/30" : ""}`}
+              className={`card-static !p-4 ${isLow ? "ring-1 ring-error/20 bg-error/5" : ""}`}
             >
               <div className="flex items-center justify-between mb-2">
                 <span className="font-bold text-primary-dark text-sm">
                   {seat.className}
                 </span>
                 {isLow ? (
-                  <AlertCircle size={16} className="text-red-500" />
+                  <AlertCircle size={16} className="text-error" />
                 ) : (
                   <CheckCircle size={16} className="text-primary/40" />
                 )}
@@ -44,12 +44,12 @@ export function SeatCounter() {
               <div className="w-full h-2.5 bg-surface-muted rounded-full overflow-hidden">
                 <div
                   className={`h-full rounded-full transition-all duration-500 ${
-                    isLow ? "bg-red-500" : "bg-primary"
+                    isLow ? "bg-error" : "bg-primary"
                   }`}
                   style={{ width: `${percentFilled}%` }}
                 />
               </div>
-              <p className={`text-xs mt-2 font-semibold ${isLow ? "text-red-600" : "text-text-muted"}`}>
+              <p className={`text-xs mt-2 font-semibold ${isLow ? "text-error" : "text-text-muted"}`}>
                 {isLow ? `Only ${remaining} seats left!` : `${remaining} seats available`}
               </p>
             </div>

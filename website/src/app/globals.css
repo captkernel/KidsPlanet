@@ -17,6 +17,11 @@
   --color-text-muted: #6b6b6b;
   --color-text-light: #4a4a3a;
 
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+
   --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
 
   --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.06);

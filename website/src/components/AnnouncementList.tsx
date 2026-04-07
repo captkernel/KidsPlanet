@@ -11,7 +11,7 @@ interface Announcement {
 const typeConfig: Record<string, { icon: typeof Bell; color: string }> = {
   general: { icon: Bell, color: "bg-primary/10 text-primary" },
   event: { icon: Gift, color: "bg-accent/10 text-accent-dark" },
-  holiday: { icon: CalendarIcon, color: "bg-red-50 text-red-600" },
+  holiday: { icon: CalendarIcon, color: "bg-error/10 text-error" },
   exam: { icon: BookOpen, color: "bg-blue-50 text-blue-600" },
 };
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { MapPin, Users, Building, Award } from "lucide-react";
+import { MapPin, Users, Building, Award, BookOpen, Heart, UserCheck } from "lucide-react";
 import { SCHOOL } from "@/lib/constants";
 import FadeIn from "@/components/FadeIn";
 import SectionHeading from "@/components/SectionHeading";
@@ -93,8 +93,57 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission — Why Kids Planet? */}
+      {/* How We Teach */}
       <section className="section-padding bg-surface">
+        <div className="mx-auto max-w-7xl">
+          <FadeIn>
+            <SectionHeading
+              label="Our Philosophy"
+              title="How We Teach"
+              subtitle="Every child learns differently. Our approach blends structured academics with the freedom to explore, question, and grow."
+            />
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <FadeIn delay={0}>
+              <div className="card-static text-center h-full">
+                <BookOpen className="h-10 w-10 text-primary mx-auto mb-4" />
+                <h3 className="text-lg font-bold text-primary-dark mb-2">
+                  Play-Based Early Learning
+                </h3>
+                <p className="text-sm text-text-light leading-relaxed">
+                  For Playgroup through UKG, learning happens through play, stories, and hands-on activities — aligned with NEP 2020 foundational stage guidelines.
+                </p>
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <div className="card-static text-center h-full">
+                <Heart className="h-10 w-10 text-primary mx-auto mb-4" />
+                <h3 className="text-lg font-bold text-primary-dark mb-2">
+                  Holistic Development
+                </h3>
+                <p className="text-sm text-text-light leading-relaxed">
+                  HPBOSE curriculum enriched with art, moral values, and physical activities — building well-rounded individuals, not just exam scores.
+                </p>
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <div className="card-static text-center h-full">
+                <UserCheck className="h-10 w-10 text-primary mx-auto mb-4" />
+                <h3 className="text-lg font-bold text-primary-dark mb-2">
+                  Personal Attention
+                </h3>
+                <p className="text-sm text-text-light leading-relaxed">
+                  With a 20:1 student-teacher ratio, every child is seen and supported. Small class sizes mean no one gets left behind.
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission — Why Kids Planet? */}
+      <section className="section-padding bg-surface-cream">
         <div className="mx-auto max-w-7xl">
           <FadeIn>
             <SectionHeading label="Our Strengths" title="Why Kids Planet?" />

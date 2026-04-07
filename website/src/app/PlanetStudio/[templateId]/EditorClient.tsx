@@ -595,7 +595,7 @@ export default function CustomizePage({
           </span>
         )}
         {copyStatus === "error" && (
-          <span className="text-xs text-red-600 font-medium ml-2">
+          <span className="text-xs text-error font-medium ml-2">
             Copy failed
           </span>
         )}
