@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Briefcase, GraduationCap } from "lucide-react";
 
 interface FacultyMember {
@@ -7,6 +8,7 @@ interface FacultyMember {
   qualification: string;
   experience: string;
   initials: string;
+  photo?: string;
   bio: string;
   featured: boolean;
 }
@@ -15,15 +17,27 @@ export function FacultyCard({ member }: { member: FacultyMember }) {
   return (
     <div className={`card-static ${member.featured ? "ring-2 ring-primary/20 bg-primary/[0.02]" : ""}`}>
       <div className="flex items-start gap-4">
-        <div
-          className={`w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 ${
-            member.featured
-              ? "bg-primary text-white shadow-sm"
-              : "bg-primary/10 text-primary"
-          }`}
-        >
-          <span className="text-lg font-bold">{member.initials}</span>
-        </div>
+        {member.photo ? (
+          <div className="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 relative">
+            <Image
+              src={member.photo}
+              alt={member.name}
+              fill
+              className="object-cover"
+              sizes="56px"
+            />
+          </div>
+        ) : (
+          <div
+            className={`w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 ${
+              member.featured
+                ? "bg-primary text-white shadow-sm"
+                : "bg-primary/10 text-primary"
+            }`}
+          >
+            <span className="text-lg font-bold">{member.initials}</span>
+          </div>
+        )}
         <div className="flex-1 min-w-0">
           <h3 className="font-bold text-primary-dark">{member.name}</h3>
           <p className="text-sm text-accent-dark font-semibold">{member.designation}</p>

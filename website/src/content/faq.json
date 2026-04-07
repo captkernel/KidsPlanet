@@ -9,7 +9,7 @@
     "id": "2",
     "category": "admissions",
     "question": "What is the age criteria for each class?",
-    "answer": "Playgroup: 2–3 years, Nursery: 3–4 years, KG: 4–5 years, Class 1: 5–6 years (age as of March 31 of the admission year). For Classes 2–8, transfer certificate from previous school is required."
+    "answer": "Playgroup: 2–3 years, Nursery: 3–4 years, LKG: 4–5 years, UKG: 5–6 years, Class 1: 6–7 years (age as of March 31 of the admission year). For Classes 2–8, transfer certificate from previous school is required."
   },
   {
     "id": "3",
@@ -129,7 +129,7 @@
     "id": "22",
     "category": "school-life",
     "question": "What services and programs does Kids Planet offer?",
-    "answer": "Kids Planet offers complete education from Playgroup (age 2) through Class 8 (age 14). Our programs include: play-based preschool (Playgroup, Nursery, KG), HPBOSE-aligned primary school (Class 1-5), and middle school (Class 6-8). Beyond academics, we offer art & craft, music, dance, sports, nature excursions, science exhibitions, cultural celebrations, and annual events like Sports Day and Annual Day."
+    "answer": "Kids Planet offers complete education from Playgroup (age 2) through Class 8 (age 14). Our programs include: play-based preschool (Playgroup, Nursery, LKG, UKG), HPBOSE-aligned primary school (Class 1-5), and middle school (Class 6-8). Beyond academics, we offer art & craft, music, dance, sports, nature excursions, science exhibitions, cultural celebrations, and annual events like Sports Day and Annual Day."
   },
   {
     "id": "23",

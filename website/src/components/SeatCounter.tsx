@@ -9,12 +9,12 @@ interface SeatInfo {
 }
 
 const seatData: SeatInfo[] = [
-  { className: "Playgroup", totalSeats: 25, filledSeats: 21 },
-  { className: "Nursery", totalSeats: 25, filledSeats: 19 },
-  { className: "KG", totalSeats: 30, filledSeats: 24 },
-  { className: "Class 1", totalSeats: 30, filledSeats: 22 },
-  { className: "Class 2–5", totalSeats: 35, filledSeats: 28 },
-  { className: "Class 6–8", totalSeats: 35, filledSeats: 26 },
+  { className: "Playgroup", totalSeats: 20, filledSeats: 12 },
+  { className: "Nursery", totalSeats: 30, filledSeats: 26 },
+  { className: "LKG", totalSeats: 35, filledSeats: 30 },
+  { className: "UKG", totalSeats: 25, filledSeats: 22 },
+  { className: "Class 1–3", totalSeats: 75, filledSeats: 56 },
+  { className: "Class 4–8", totalSeats: 150, filledSeats: 88 },
 ];
 
 export function SeatCounter() {

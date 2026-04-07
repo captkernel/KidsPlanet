@@ -49,5 +49,21 @@
   {"id":"48","src":"/images/gallery/student-portrait.jpg","alt":"A young student proudly showing a handmade heart craft","category":"activities"},
   {"id":"49","src":"/images/gallery/student-closeup.jpg","alt":"Portrait of a student in yellow Kids Planet jacket in a decorated classroom","category":"classrooms"},
   {"id":"50","src":"/images/gallery/tilak-welcome.jpg","alt":"Traditional welcome — teacher applying tilak on a student's forehead","category":"campus"},
-  {"id":"51","src":"/images/gallery/teacher-nurturing.jpg","alt":"Teacher caring for a child at the school entrance — warmth and love","category":"campus"}
+  {"id":"51","src":"/images/gallery/teacher-nurturing.jpg","alt":"Teacher caring for a child at the school entrance — warmth and love","category":"campus"},
+  {"id":"52","src":"/images/class-groups/nursery.jpg","alt":"Nursery class group photo — 26 bright students in yellow uniforms with their teacher","category":"classrooms"},
+  {"id":"53","src":"/images/class-groups/lkg.jpg","alt":"LKG class group photo — 30 students in yellow uniforms outdoors","category":"classrooms"},
+  {"id":"54","src":"/images/class-groups/ukg.jpg","alt":"UKG class group photo — 22 students in yellow uniforms at the park","category":"classrooms"},
+  {"id":"55","src":"/images/class-groups/class-1.jpg","alt":"Class 1 group photo — 19 students in green uniforms with their class teacher","category":"classrooms"},
+  {"id":"56","src":"/images/class-groups/class-2.jpg","alt":"Class 2 group photo — students in green uniforms posing with teacher under eucalyptus trees","category":"classrooms"},
+  {"id":"57","src":"/images/class-groups/class-3.jpg","alt":"Class 3 group photo — students in green and white uniforms with their teacher","category":"classrooms"},
+  {"id":"58","src":"/images/class-groups/class-5.jpg","alt":"Class 5 group photo — students in green uniforms with Mrs. Pragya Sharma","category":"classrooms"},
+  {"id":"59","src":"/images/sports/basketball/courtyard-01.jpg","alt":"Students playing basketball in the school courtyard with mountain backdrop","category":"sports"},
+  {"id":"60","src":"/images/sports/basketball/shooting-01.jpg","alt":"Student shooting basketball at the courtyard hoop — sports at Kids Planet","category":"sports"},
+  {"id":"61","src":"/images/sports/table-tennis/game-01.jpg","alt":"Students playing table tennis in the Kids Planet indoor sports hall","category":"sports"},
+  {"id":"62","src":"/images/sports/table-tennis/collage.jpg","alt":"Table tennis activity collage — students enjoying indoor sports","category":"sports"},
+  {"id":"63","src":"/images/excursions/temple-visit-01.jpg","alt":"Class 8 temple excursion — group photo at a historic Kullu Valley temple","category":"campus"},
+  {"id":"64","src":"/images/excursions/temple-visit-02.jpg","alt":"Class 8 students and teachers at temple steps during educational excursion","category":"campus"},
+  {"id":"65","src":"/images/staff/santosh-kumari.jpg","alt":"Mrs. Santosh Kumari — Class 2 Teacher at Kids Planet","category":"campus"},
+  {"id":"66","src":"/images/staff/pragya-sharma.jpg","alt":"Mrs. Pragya Sharma — Senior Class 5 Teacher with 15 years experience","category":"campus"},
+  {"id":"67","src":"/images/staff/director.jpg","alt":"Kids Planet Director at his office desk","category":"campus"}
 ]

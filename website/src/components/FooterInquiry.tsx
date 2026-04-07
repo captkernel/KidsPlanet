@@ -56,7 +56,8 @@ export function FooterInquiry() {
         <option value="" className="text-black">Child&apos;s class</option>
         <option value="Playgroup" className="text-black">Playgroup</option>
         <option value="Nursery" className="text-black">Nursery</option>
-        <option value="KG" className="text-black">KG</option>
+        <option value="LKG" className="text-black">LKG</option>
+        <option value="UKG" className="text-black">UKG</option>
         <option value="Class 1-5" className="text-black">Class 1–5</option>
         <option value="Class 6-8" className="text-black">Class 6–8</option>
       </select>

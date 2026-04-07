@@ -32,7 +32,7 @@ const stories: Story[] = [
   },
   {
     name: "Ananya",
-    joinedClass: "KG",
+    joinedClass: "LKG",
     currentClass: "Class 8",
     quote: "Ananya was so timid she wouldn't raise her hand even when she knew the answer. Her parents thought she just wasn't a confident child.",
     achievement: "This year she performed a classical dance at the farewell ceremony, was elected Vice Captain, and scored among the top in her HPBOSE Class 8 exams. Her farewell speech brought tears to everyone's eyes.",

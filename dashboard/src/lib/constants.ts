@@ -12,7 +12,7 @@ export const SCHOOL = {
   address: "Above Circuit House, Miyanbehar, Dhalpur, Kullu — 175101",
   founder: "Mrs. Neeta Parmar",
   founded: 2010,
-  classes: ["Playgroup", "Nursery", "KG", "Class 1", "Class 2", "Class 3", "Class 4", "Class 5", "Class 6", "Class 7", "Class 8"],
+  classes: ["Playgroup", "Nursery", "LKG", "UKG", "Class 1", "Class 2", "Class 3", "Class 4", "Class 5", "Class 6", "Class 7", "Class 8"],
 };
 
 export const NAV_ITEMS = [
@@ -29,7 +29,7 @@ export const NAV_ITEMS = [
   { href: "/health", label: "Health", icon: HeartPulse, section: "admin", roles: ["admin", "staff"] },
   { href: "/transport", label: "Transport", icon: Bus, section: "admin", roles: ["admin"] },
   { href: "/meals", label: "Meals", icon: UtensilsCrossed, section: "admin", roles: ["admin", "staff"] },
-  { href: "/content-studio", label: "Content Studio", icon: Palette, section: "tools", roles: ["admin"] },
+  { href: "/content-studio", label: "Planet Studio", icon: Palette, section: "tools", roles: ["admin"] },
   { href: "/website", label: "Website", icon: Globe, section: "tools", roles: ["admin"] },
   { href: "/reports", label: "Reports", icon: BarChart3, section: "tools", roles: ["admin", "accountant"] },
   { href: "/parent", label: "Parent Portal", icon: Home, section: "main", roles: ["parent"] },
@@ -45,7 +45,8 @@ export const SECTIONS: Record<string, string> = {
 export const CLASS_COLORS: Record<string, string> = {
   Playgroup: "bg-purple-100 text-purple-700",
   Nursery: "bg-blue-100 text-blue-700",
-  KG: "bg-cyan-100 text-cyan-700",
+  LKG: "bg-sky-100 text-sky-700",
+  UKG: "bg-cyan-100 text-cyan-700",
   "Class 1": "bg-green-100 text-green-700",
   "Class 2": "bg-emerald-100 text-emerald-700",
   "Class 3": "bg-teal-100 text-teal-700",

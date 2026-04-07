@@ -124,7 +124,8 @@ export function InquiryForm() {
           <option value="">Select class</option>
           <option value="Playgroup">Playgroup</option>
           <option value="Nursery">Nursery</option>
-          <option value="KG">Kindergarten (KG)</option>
+          <option value="LKG">LKG</option>
+          <option value="UKG">UKG</option>
           <option value="Class 1">Class 1</option>
           <option value="Class 2">Class 2</option>
           <option value="Class 3">Class 3</option>
