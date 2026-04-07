@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone } from "lucide-react";
@@ -10,8 +10,29 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
 
+  // Close mobile menu on Escape key
+  const handleEscape = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape" && mobileOpen) setMobileOpen(false);
+    },
+    [mobileOpen],
+  );
+
+  useEffect(() => {
+    if (mobileOpen) {
+      document.addEventListener("keydown", handleEscape);
+      return () => document.removeEventListener("keydown", handleEscape);
+    }
+  }, [mobileOpen, handleEscape]);
+
   return (
     <header className="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-primary/10">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg focus:text-primary focus:shadow-lg focus:font-medium"
+      >
+        Skip to content
+      </a>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -41,6 +62,7 @@ export default function Header() {
                       ? "text-primary bg-primary/10"
                       : "text-text-light hover:text-primary hover:bg-primary/5"
                   }`}
+                  {...(isActive ? { "aria-current": "page" as const } : {})}
                 >
                   {link.label}
                 </Link>
@@ -66,6 +88,7 @@ export default function Header() {
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
+              aria-controls="mobile-nav"
             >
               {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -75,6 +98,7 @@ export default function Header() {
 
       {/* Mobile Navigation — slide down */}
       <div
+        id="mobile-nav"
         className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           mobileOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
         }`}
@@ -93,6 +117,7 @@ export default function Header() {
                       : "text-text-light hover:text-primary hover:bg-primary/5"
                   }`}
                   onClick={() => setMobileOpen(false)}
+                  {...(isActive ? { "aria-current": "page" as const } : {})}
                 >
                   {link.label}
                 </Link>

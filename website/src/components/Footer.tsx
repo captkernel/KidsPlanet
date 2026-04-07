@@ -28,19 +28,19 @@ export default function Footer() {
                 href={SCHOOL.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
                 aria-label="Facebook"
               >
-                <Facebook className="h-4 w-4" />
+                <Facebook className="h-5 w-5" />
               </a>
               <a
                 href={SCHOOL.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
                 aria-label="Instagram"
               >
-                <Instagram className="h-4 w-4" />
+                <Instagram className="h-5 w-5" />
               </a>
             </div>
           </div>

@@ -56,6 +56,8 @@ export function FAQAccordion({ faqs, showCategories = true }: { faqs: FAQ[]; sho
             <button
               onClick={() => setOpenId(openId === faq.id ? null : faq.id)}
               className="w-full flex items-center justify-between p-5 text-left"
+              aria-expanded={openId === faq.id}
+              aria-controls={`faq-content-${faq.id}`}
             >
               <span className="font-semibold text-primary-dark text-sm pr-4">
                 {faq.question}
@@ -68,7 +70,7 @@ export function FAQAccordion({ faqs, showCategories = true }: { faqs: FAQ[]; sho
               />
             </button>
             {openId === faq.id && (
-              <div className="px-5 pb-5 -mt-1">
+              <div id={`faq-content-${faq.id}`} role="region" className="px-5 pb-5 -mt-1">
                 <p className="text-sm text-text-light leading-relaxed">
                   {faq.answer}
                 </p>

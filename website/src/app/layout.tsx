@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import BackToTop from "@/components/BackToTop";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import { SCHOOL } from "@/lib/constants";
 import { getSchoolJsonLd } from "@/lib/metadata";
@@ -54,11 +55,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(getSchoolJsonLd()) }}
         />
         <Header />
-        <main className="min-h-screen pb-16 lg:pb-0">{children}</main>
+        <main id="main-content" className="min-h-screen pb-16 lg:pb-0">{children}</main>
         <Footer />
         <div className="hidden lg:block">
           <WhatsAppButton />
         </div>
+        <BackToTop />
         <StickyMobileCTA />
       </body>
     </html>
