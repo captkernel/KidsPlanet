@@ -49,7 +49,7 @@ export default function Hero() {
         </div>
 
         {/* Urgency line */}
-        <p className="mt-4 text-xs text-red-600 font-semibold">
+        <p className="mt-4 text-xs text-error font-semibold">
           2026–27 admissions open — limited seats available
         </p>
       </div>

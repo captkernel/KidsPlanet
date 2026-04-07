@@ -22,7 +22,7 @@ export default function AdmissionsPage() {
     <>
       <section className="section-padding bg-surface-cream">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="text-xs font-semibold uppercase tracking-[4px] text-red-600 mb-4">
+          <div className="text-xs font-semibold uppercase tracking-[4px] text-error mb-4">
             Limited Seats — 2026–27 Session
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-primary-dark">

@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Play } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
+import { SCHOOL } from "@/lib/constants";
 
 export function VideoEmbed({ videoId, title }: { videoId?: string; title?: string }) {
   if (!videoId) {
@@ -9,16 +10,27 @@ export function VideoEmbed({ videoId, title }: { videoId?: string; title?: strin
           src="/images/campus/new-building-event.jpg"
           alt="Kids Planet campus — step inside our school"
           fill
-          className="object-cover opacity-60"
+          className="object-cover opacity-40"
           sizes="(max-width: 768px) 100vw, 896px"
         />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white">
-            <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-4">
-              <Play size={28} className="text-white ml-1" />
+          <div className="text-center text-white px-6">
+            <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-5">
+              <MapPin size={26} className="text-white" />
             </div>
-            <p className="text-lg font-semibold">Virtual Tour Coming Soon</p>
-            <p className="text-sm text-white/70 mt-1">Visit us in person — call +91 94180 23454 to schedule a tour</p>
+            <h3 className="text-2xl font-bold mb-2">Want to See Our Campus?</h3>
+            <p className="text-white/80 text-sm max-w-md mx-auto mb-6">
+              Schedule a personal visit and experience our classrooms, play areas, and learning spaces first-hand.
+            </p>
+            <a
+              href={`https://wa.me/${SCHOOL.whatsapp}?text=${encodeURIComponent("Hi, I'd like to schedule a campus visit at Kids Planet.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-white text-primary-dark font-semibold px-6 py-3 rounded-lg hover:bg-accent-light transition-colors text-sm"
+            >
+              <Phone size={18} />
+              Schedule a Visit — {SCHOOL.phoneDisplay}
+            </a>
           </div>
         </div>
       </div>

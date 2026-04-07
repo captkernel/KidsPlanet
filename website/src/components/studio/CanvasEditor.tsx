@@ -770,7 +770,7 @@ export default function CanvasEditor({
       </button>
       <button
         onClick={ctxDelete}
-        className="w-full px-3 py-1.5 flex items-center gap-2 hover:bg-red-50 text-left text-red-600"
+        className="w-full px-3 py-1.5 flex items-center gap-2 hover:bg-error/10 text-left text-error"
       >
         <Trash2 size={14} /> Delete
       </button>

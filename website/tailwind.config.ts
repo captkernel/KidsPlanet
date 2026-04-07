@@ -29,6 +29,10 @@ const config: Config = {
           muted: "#888888",
           light: "#5a5a4a",
         },
+        success: "var(--color-success)",
+        warning: "var(--color-warning)",
+        error: "var(--color-error)",
+        info: "var(--color-info)",
       },
       fontFamily: {
         sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"],

@@ -40,7 +40,7 @@ export function WhyDifferent() {
               {row.them ? (
                 <Check size={18} className="text-text-muted" />
               ) : (
-                <X size={18} className="text-red-400" />
+                <X size={18} className="text-error/70" />
               )}
             </div>
           </div>
