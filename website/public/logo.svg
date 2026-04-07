@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <!-- Planet circle -->
+  <circle cx="60" cy="60" r="48" fill="#2d5016"/>
+
+  <!-- Planet ring / orbit arc -->
+  <ellipse cx="60" cy="60" rx="56" ry="18" stroke="#c8a84e" stroke-width="3.5" fill="none" transform="rotate(-25 60 60)"/>
+
+  <!-- Leaf / growth sprout on top of planet -->
+  <path d="M60 16 C54 6, 42 2, 38 12 C34 22, 48 22, 54 18" fill="#4a7c28" stroke="#2d5016" stroke-width="0.5"/>
+  <path d="M60 16 C66 6, 78 2, 82 12 C86 22, 72 22, 66 18" fill="#4a7c28" stroke="#2d5016" stroke-width="0.5"/>
+
+  <!-- Small star accent -->
+  <path d="M96 22 L98 16 L100 22 L106 24 L100 26 L98 32 L96 26 L90 24 Z" fill="#c8a84e"/>
+
+  <!-- Letter K on the planet -->
+  <text x="60" y="72" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="46" fill="white" letter-spacing="-1">K</text>
+
+  <!-- Wordmark: Kids Planet -->
+  <text x="134" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="38" fill="#1a3a1a" letter-spacing="-0.5">Kids Planet</text>
+
+  <!-- Tagline -->
+  <text x="136" y="78" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="13" fill="#c8a84e" letter-spacing="3">NURTURING EXCELLENCE</text>
+
+  <!-- Subtitle: Since 2010 -->
+  <text x="136" y="96" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="11" fill="#6b6b6b" letter-spacing="1.5">KULLU VALLEY · SINCE 2010</text>
+</svg>

@@ -11,9 +11,8 @@ export default function Footer() {
           {/* School Info */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-md bg-accent text-primary-dark font-bold text-lg">
-                KP
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-icon.svg" alt="" className="h-10 w-10" />
               <div>
                 <div className="text-lg font-bold leading-tight">{SCHOOL.name}</div>
                 <div className="text-sm text-white/70 leading-tight">

@@ -29,6 +29,10 @@ export const metadata: Metadata = {
     "playgroup Kullu",
     "best school Kullu",
   ],
+  icons: {
+    icon: "/logo-icon.svg",
+    apple: "/logo-icon.svg",
+  },
   openGraph: {
     type: "website",
     siteName: SCHOOL.name,

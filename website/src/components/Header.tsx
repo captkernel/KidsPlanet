@@ -16,11 +16,8 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            {/* Logo mark — planet with child silhouette */}
-            <div className="relative flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white shadow-sm group-hover:bg-primary-light transition-colors">
-              <span className="text-lg font-extrabold tracking-tight">K</span>
-              <span className="absolute -bottom-0.5 -right-0.5 h-3.5 w-3.5 rounded-full bg-accent border-2 border-surface" />
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-icon.svg" alt="" className="h-10 w-10" />
             <div>
               <div className="text-lg font-extrabold text-primary-dark leading-none tracking-tight">
                 Kids Planet
