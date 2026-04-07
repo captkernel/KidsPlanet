@@ -105,7 +105,8 @@ function Lightbox({
 }
 
 export function GalleryGrid({ images }: { images: GalleryImage[] }) {
-  const categories = ["all", ...new Set(images.map((img) => img.category))];
+  const categoryList = [...new Set(images.map((img) => img.category))];
+  const categories = ["all", ...categoryList];
   const [activeCategory, setActiveCategory] = useState("all");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
@@ -113,6 +114,9 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
     activeCategory === "all"
       ? images
       : images.filter((img) => img.category === activeCategory);
+
+  const getCategoryCount = (cat: string) =>
+    cat === "all" ? images.length : images.filter((img) => img.category === cat).length;
 
   return (
     <div>
@@ -127,7 +131,7 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
                 : "bg-surface-muted text-text-light hover:bg-primary/10"
             }`}
           >
-            {cat}
+            {cat} ({getCategoryCount(cat)})
           </button>
         ))}
       </div>

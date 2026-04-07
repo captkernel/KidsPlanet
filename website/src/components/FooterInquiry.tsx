@@ -34,21 +34,27 @@ export function FooterInquiry() {
       <p className="text-sm text-white/80 mb-2">
         Quick inquiry — we&apos;ll call you back within hours.
       </p>
+      <label htmlFor="footer-name" className="sr-only">Your name</label>
       <input
+        id="footer-name"
         type="text"
         name="parent_name"
         required
         placeholder="Your name"
         className="w-full px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white text-sm placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent/50"
       />
+      <label htmlFor="footer-phone" className="sr-only">Phone number</label>
       <input
+        id="footer-phone"
         type="tel"
         name="phone"
         required
         placeholder="Phone number"
         className="w-full px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white text-sm placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent/50"
       />
+      <label htmlFor="footer-class" className="sr-only">Child&apos;s class</label>
       <select
+        id="footer-class"
         name="child_class"
         required
         className="w-full px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white text-sm focus:outline-none focus:ring-2 focus:ring-accent/50"
